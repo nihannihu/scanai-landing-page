@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Credential Verification — ScanAI</title>
+  <meta name="description" content="Official credential verification portal for ScanAI Healthcare Technologies." />
+  <link rel="icon" type="image/png" href="../assets/logo.png" />
+
+  <!-- Clean Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="./verify.css" />
+</head>
+<body>
+
+  <!-- Top Enterprise Navigation Header -->
+  <header class="verify-header">
+    <div class="verify-header-inner">
+      <a href="../" class="verify-brand" aria-label="ScanAI Home">
+        <img src="../assets/logo.png" alt="ScanAI" class="brand-img" />
+        <span class="brand-divider">/</span>
+        <span class="brand-sub">Credential Verification</span>
+      </a>
+      <div class="header-status">
+        <span class="status-dot"></span>
+        <span>Official Registry</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Verification Container -->
+  <main class="verify-main">
+    <div class="verify-container">
+
+      <!-- Loading State -->
+      <div id="stateLoading" class="state-view">
+        <div class="spinner"></div>
+        <p class="state-text">Verifying credential against company records...</p>
+      </div>
+
+      <!-- Verified Success State -->
+      <article id="stateSuccess" class="credential-card" style="display: none;">
+        
+        <!-- Status Banner -->
+        <div class="status-banner">
+          <div class="status-icon">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="status-info">
+            <div class="status-title">Verified Credential</div>
+            <div class="status-subtitle">This record has been confirmed against official ScanAI company records.</div>
+          </div>
+        </div>
+
+        <!-- Recipient & Credential Title -->
+        <div class="credential-header">
+          <div class="credential-type" id="certType">Certificate of Internship Completion</div>
+          <h1 class="recipient-name" id="certRecipient">Priya KM</h1>
+          <p class="credential-summary-line">
+            <span class="font-medium text-slate" id="certRole">AI Research Intern</span>
+            <span class="text-divider">•</span>
+            <span id="certDept">Autonomous Perception &amp; Surgical AI</span>
+          </p>
+        </div>
+
+        <!-- Metadata Table / Grid -->
+        <div class="meta-section">
+          <table class="meta-table">
+            <tbody>
+              <tr>
+                <th scope="row">Credential ID</th>
+                <td>
+                  <span class="id-code" id="certId">SCAN-2026-INT-001</span>
+                  <button type="button" class="action-link-btn" id="btnCopyId" title="Copy ID">Copy</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Status</th>
+                <td><span class="status-pill">Active</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Internship Period</th>
+                <td id="certTenure">January 2026 – June 2026 (6 Months)</td>
+              </tr>
+              <tr>
+                <th scope="row">Issue Date</th>
+                <td id="certIssueDate">June 30, 2026</td>
+              </tr>
+              <tr>
+                <th scope="row">Issuing Entity</th>
+                <td id="certIssuer">ScanAI Healthcare Technologies Inc.</td>
+              </tr>
+              <tr>
+                <th scope="row">Location</th>
+                <td id="certLocation">Bengaluru, Karnataka, India</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Scope & Description -->
+        <div class="content-block">
+          <h2 class="block-heading">Internship Scope &amp; Contributions</h2>
+          <p class="block-text" id="certSummary">
+            Completed a 6-month research internship contributing to computer vision algorithms, real-time surgical perception, and AI model evaluation within the Omni Rovis surgical navigation pipeline.
+          </p>
+          <div class="tags-row" id="certSkills">
+            <!-- Dynamic skills -->
+          </div>
+        </div>
+
+        <!-- Institutional Authority Footer -->
+        <div class="authority-note">
+          <div class="authority-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <p>
+            Issued under the authority of the <strong>ScanAI Engineering &amp; Clinical Research Board</strong>.
+            Verified as authentic on <span id="verificationTimestamp"></span>.
+          </p>
+        </div>
+
+        <!-- User Actions Bar -->
+        <div class="actions-bar">
+          <button type="button" class="btn-action-primary" id="btnPrint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            Print Verification Record
+          </button>
+          <button type="button" class="btn-action-secondary" id="btnShare">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+              <polyline points="16 6 12 2 8 6"></polyline>
+              <line x1="12" y1="2" x2="12" y2="15"></line>
+            </svg>
+            Copy Verification Link
+          </button>
+          <button type="button" class="btn-action-tertiary" id="btnToggleQr">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Certificate QR Code
+          </button>
+        </div>
+
+        <!-- Collapsible QR Code (For admin/printing use) -->
+        <div class="qr-panel" id="qrPreviewBox" style="display: none;">
+          <div class="qr-panel-info">
+            <h3>Certificate QR Code</h3>
+            <p>Scan to verify on mobile or download to place directly onto the printed/PDF certificate.</p>
+          </div>
+          <div class="qr-img-box">
+            <img id="qrImage" src="" alt="QR Code for Credential Verification" />
+          </div>
+          <div class="qr-target-url" id="qrUrlDisplay"></div>
+        </div>
+
+      </article>
+
+      <!-- Search / Not Found View -->
+      <div id="stateNotFound" class="search-view" style="display: none;">
+        <h2 class="search-title" id="notFoundTitle">Verify a ScanAI Credential</h2>
+        <p class="search-desc" id="notFoundDesc">
+          Enter the Credential ID printed on the certificate to check its validity against company records.
+        </p>
+
+        <form class="lookup-form" id="searchForm">
+          <div class="lookup-input-group">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="lookup-input" 
+              placeholder="e.g. SCAN-2026-INT-001" 
+              autocomplete="off" 
+              spellcheck="false" 
+              required
+            />
+            <button type="submit" class="lookup-btn">Search</button>
+          </div>
+          <div class="lookup-hint">
+            <span>Sample record:</span>
+            <button type="button" class="sample-link" onclick="lookupId('SCAN-2026-INT-001')">SCAN-2026-INT-001 (Priya KM)</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Institutional Footer Note -->
+      <footer class="portal-footer">
+        <p>ScanAI Healthcare Technologies Inc. • Bengaluru, India</p>
+        <p class="footer-sub">For institutional background checks or questions, email <a href="mailto:verify@scanai.health">verify@scanai.health</a></p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="./verify.js"></script>
+</body>
+</html>
