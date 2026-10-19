@@ -15,5 +15,23 @@
     "summary": "Completed a 6-month intensive research internship contributing to computer vision algorithms, real-time surgical perception, and AI model evaluation within the Omni Rovis surgical navigation pipeline.",
     "skills": ["Computer Vision", "Deep Learning", "Surgical AI", "Edge Inference", "Python / PyTorch"],
     "verifiedBy": "ScanAI Engineering & Clinical Research Board"
+  },
+  {
+    "id": "SCAN-2026-INT-002",
+    "recipientName": "SHIFA HANI",
+    "role": "AI Research Intern",
+    "department": "Autonomous Perception & Surgical AI",
+    "startDate": "July 2, 2026",
+    "endDate": "December 29, 2026",
+    "duration": "6 Months",
+    "issueDate": "December 29, 2026",
+    "status": "Verified",
+    "issuer": "ScanAI Medical Technologies",
+    "credentialType": "Certificate of Internship Completion",
+    "location": "Bengaluru, India (Hybrid)",
+    "summary": "Completed a 6-month intensive research internship contributing to computer vision algorithms, real-time surgical perception, and AI model evaluation within the Omni Rovis surgical navigation pipeline.",
+    "skills": ["Computer Vision", "Deep Learning", "Surgical AI", "Edge Inference", "Python / PyTorch"],
+    "stipend": "₹10,000 / month",
+    "verifiedBy": "ScanAI Engineering & Clinical Research Board"
   }
 ]

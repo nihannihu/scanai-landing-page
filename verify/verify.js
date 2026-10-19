@@ -24,6 +24,24 @@
       "summary": "Completed a 6-month research internship contributing to computer vision algorithms, real-time surgical perception, and AI model evaluation within the Omni Rovis surgical navigation pipeline.",
       "skills": ["Computer Vision", "Deep Learning", "Surgical AI", "Edge Inference", "PyTorch / Python"],
       "verifiedBy": "ScanAI Engineering & Clinical Research Board"
+    },
+    {
+      "id": "SCAN-2026-INT-002",
+      "recipientName": "SHIFA HANI",
+      "role": "AI Research Intern",
+      "department": "Autonomous Perception & Surgical AI",
+      "startDate": "July 2, 2026",
+      "endDate": "December 29, 2026",
+      "duration": "6 Months",
+      "issueDate": "December 29, 2026",
+      "status": "Active",
+      "issuer": "ScanAI Medical Technologies",
+      "credentialType": "Certificate of Internship Completion",
+      "location": "Bengaluru, India (Hybrid)",
+      "summary": "Completed a 6-month intensive research internship contributing to computer vision algorithms, real-time surgical perception, and AI model evaluation within the Omni Rovis surgical navigation pipeline.",
+      "skills": ["Computer Vision", "Deep Learning", "Surgical AI", "Edge Inference", "Python / PyTorch"],
+      "stipend": "₹10,000 / month",
+      "verifiedBy": "ScanAI Engineering & Clinical Research Board"
     }
   ];
 
@@ -45,6 +63,8 @@
   const certLocation = document.getElementById('certLocation');
   const certSummary = document.getElementById('certSummary');
   const certSkills = document.getElementById('certSkills');
+  const rowStipend = document.getElementById('rowStipend');
+  const certStipend = document.getElementById('certStipend');
   const verificationTimestamp = document.getElementById('verificationTimestamp');
 
   const btnCopyId = document.getElementById('btnCopyId');
@@ -97,12 +117,13 @@
     return null;
   }
 
-  // Lookup certificate by ID
+  // Lookup certificate by ID or recipient name
   function findRecord(id) {
     if (!id) return null;
     const cleanId = id.trim().toUpperCase();
     return certificateDatabase.find(function (item) {
-      return item.id && item.id.trim().toUpperCase() === cleanId;
+      return (item.id && item.id.trim().toUpperCase() === cleanId) ||
+             (item.recipientName && item.recipientName.trim().toUpperCase() === cleanId);
     });
   }
 
@@ -124,6 +145,16 @@
     if (certLocation) certLocation.textContent = record.location || 'Bengaluru, Karnataka, India';
     certType.textContent = record.credentialType || 'Certificate of Internship Completion';
     certSummary.textContent = record.summary || '';
+
+    // Render Stipend if available
+    if (rowStipend && certStipend) {
+      if (record.stipend) {
+        certStipend.textContent = record.stipend;
+        rowStipend.style.display = '';
+      } else {
+        rowStipend.style.display = 'none';
+      }
+    }
 
     // Render Skills / Competencies
     certSkills.innerHTML = '';
