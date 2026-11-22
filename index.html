@@ -3,40 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ScanAI — Autonomous Surgical Navigation & National Hospital OS</title>
-  <meta name="description" content="ScanAI pioneers Omni Rovis (autonomous fluoroscopy motion compensation & AI surgical navigation) and Arogya Connect (ABDM M1-M4 certified hospital operating system and NHCX claims engine)." />
-  
-  <!-- OpenGraph / Social Meta Tags -->
-  <meta property="og:title" content="ScanAI — Omni Rovis Surgical AI & Arogya Connect Hospital OS" />
-  <meta property="og:description" content="Autonomous surgical navigation platform reducing fluoroscopic radiation up to 78%, paired with India's premier ABDM & NHCX hospital operating system." />
-  <meta property="og:image" content="./assets/omni_rovis_cockpit.png" />
+  <title>Scan AI Private Limited — 3D Spine Imaging, Tracker-Free Navigation &amp; Surgical Robotics</title>
+  <meta name="description" content="Scan AI Private Limited (Bengaluru) unifies Pre-Op CT registration (Cero XVR), intraoperative 3D C-arm reconstruction (OmniCBCT), and 6-DOF robotic pedicle guidance (OmniSpine)." />
+
+  <meta property="og:title" content="Scan AI Private Limited — 3D Spine Navigation & Surgical Robotics" />
+  <meta property="og:description" content="Precision 3D Spine Imaging, Tracker-Free Navigation & Robotic Guidance without ₹3 Crore imported hardware." />
+  <meta property="og:image" content="./assets/deck/image2.jpg" />
   <meta property="og:type" content="website" />
 
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
+  <link rel="icon" type="image/png" href="./assets/scanai-logo.png" />
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function(regs) {
-        for (var i = 0; i < regs.length; i++) { regs[i].unregister(); }
-      });
-    }
-    if ('caches' in window) {
-      caches.keys().then(function(names) {
-        for (var i = 0; i < names.length; i++) { caches.delete(names[i]); }
-      });
-    }
-  </script>
-
-  <link rel="icon" type="image/png" href="./assets/logo.png" />
-
-  <!-- Single Clean Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/variables.css" />
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./css/components.css" />
@@ -44,38 +24,33 @@
 </head>
 <body>
 
-  <!-- ========================================================================
-       1. Enterprise Navigation Header
-       ======================================================================== -->
+  <!-- Header -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-container">
-      <a href="/" class="brand-logo" aria-label="ScanAI Home">
-        <img src="./assets/logo.png" alt="ScanAI Healthcare Logo" />
+      <a href="/" class="brand-logo" aria-label="Scan AI Home">
+        <img src="./assets/scanai-logo.png" alt="Scan AI Private Limited Logo" />
+        <div class="brand-wordmark">
+          <strong>Scan AI</strong>
+          <span>Private Limited</span>
+        </div>
       </a>
 
-      <!-- Desktop Navigation -->
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="#rovis-overview" class="nav-link">Omni Rovis</a></li>
-          <li><a href="#clinical-need" class="nav-link">Clinical Need</a></li>
-          <li><a href="#architecture" class="nav-link">Vision &amp; Control</a></li>
-          <li><a href="#pilot-studies" class="nav-link">Pilot Studies</a></li>
-          <li><a href="#trublock" class="nav-link">TruBlock</a></li>
-          <li><a href="#arogya-connect" class="nav-link">Arogya Connect</a></li>
-          <li><a href="./products.html" class="nav-link">Catalog</a></li>
-          <li><a href="./about.html" class="nav-link">About</a></li>
+          <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
+          <li><a href="#bottleneck" class="nav-link">Engineering Proof</a></li>
+          <li><a href="#omnispine" class="nav-link">OmniSpine™</a></li>
+          <li><a href="#omnicbct" class="nav-link">OmniCBCT 3D</a></li>
+          <li><a href="#omnicero" class="nav-link">Omni Cero</a></li>
+          <li><a href="./products.html" class="nav-link">Platforms</a></li>
+          <li><a href="./about.html" class="nav-link">Company</a></li>
         </ul>
       </nav>
 
-      <!-- Header Actions -->
       <div class="nav-actions">
-        <a href="#contact" class="btn-nav-cta">
-          <span>Request Demo</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <a href="./contact.html" class="btn-nav-cta">Partner with us</a>
       </div>
 
-      <!-- Mobile Hamburger Button -->
       <button class="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
@@ -86,886 +61,572 @@
   <div class="drawer-backdrop"></div>
   <aside class="mobile-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
-      <a href="/" aria-label="ScanAI Home"><img src="./assets/logo.png" alt="ScanAI Logo" style="height: 28px;" /></a>
+      <a href="/" class="brand-logo" aria-label="Scan AI Home">
+        <img src="./assets/scanai-logo.png" alt="Scan AI Logo" style="height: 30px;" />
+        <div class="brand-wordmark">
+          <strong>Scan AI</strong>
+          <span>Private Limited</span>
+        </div>
+      </a>
       <button class="drawer-close" aria-label="Close Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </div>
     <ul class="mobile-nav-links">
-      <li><a href="#rovis-overview">Omni Rovis</a></li>
-      <li><a href="#clinical-need">Clinical Need</a></li>
-      <li><a href="#architecture">Perception & Control</a></li>
-      <li><a href="#pilot-studies">Pilot Studies</a></li>
-      <li><a href="#trublock">TruBlock Hardware</a></li>
-      <li><a href="#arogya-connect">Arogya Connect (Hospital OS)</a></li>
-      <li><a href="./products.html">Equipment Catalog</a></li>
-      <li><a href="./about.html">About ScanAI</a></li>
-      <li><a href="./contact.html">Contact Specialist</a></li>
+      <li><a href="#roadmap">3-Stage Roadmap</a></li>
+      <li><a href="#bottleneck">Engineering Proof</a></li>
+      <li><a href="#omnispine">OmniSpine™ Navigation</a></li>
+      <li><a href="#omnicbct">OmniCBCT 3D Engine</a></li>
+      <li><a href="#omnicero">Omni Cero Suite</a></li>
+      <li><a href="./products.html">All Platforms</a></li>
+      <li><a href="./about.html">Leadership &amp; Governance</a></li>
+      <li><a href="./contact.html">Contact &amp; 48-Hr Proof</a></li>
     </ul>
     <div class="drawer-cta-wrap">
-      <a href="#contact" class="btn btn-primary btn-md" style="width: 100%;">Request Clinical Demo</a>
+      <a href="./contact.html" class="btn btn-primary btn-md" style="width: 100%;">Request 48-hour proof</a>
     </div>
   </aside>
 
-  <!-- ========================================================================
-       2. Hero Section: Omni Rovis Flagship Platform
-       ======================================================================== -->
-  <section class="hero-section" id="rovis-overview">
-    <div class="container">
-      <div class="hero-content text-center">
+  <!-- ======================================================================
+       1. HERO SECTION (Minimal Flagship Hardware Showcase)
+       ====================================================================== -->
+  <section class="hero-section hero-fullbleed">
+    <div class="hero-bg-layer" aria-hidden="true"></div>
+    <div class="hero-scrim-layer" aria-hidden="true"></div>
+    <div class="container hero-content-wrap">
+      <div class="hero-copy">
+        <p class="hero-location">Scan AI · Bengaluru, India</p>
+
         <h1 class="hero-title">
-          Autonomous Fluoroscopy Navigation &amp; Real-Time Motion Compensation
+          Precision 3D Spine<br />Navigation &amp; Robotics.
         </h1>
 
-        <p class="hero-desc">
-          Omni Rovis transforms conventional interventional C-arm fluoroscopy into an intelligent, motion-stabilized robotic imaging suite. By fusing a 5-task TensorRT vision cascade with adaptive visual servoing, Omni Rovis eliminates manual table adjustments, suppresses contrast washout blindness, and cuts operator radiation by up to 78%.
+        <p class="hero-subtitle">
+          Pre-Op CT registration, 3D C-arm reconstruction, and 6-DOF robotic pedicle guidance.
         </p>
 
-        <div class="hero-actions" style="display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; width: 100%; margin: 0 auto 40px auto;">
-          <a href="https://rovis.omniide.com/" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 8px;">
-            <span>Launch Omni Rovis Platform</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-          </a>
-          <a href="#pilot-studies" class="btn btn-secondary btn-lg">
-            <span>Explore Pilot Studies</span>
-          </a>
-          <a href="#contact" class="btn btn-secondary btn-lg">
-            <span>Inquire for Research Trials</span>
-          </a>
-        </div>
-
-        <!-- Metrics Strip -->
-        <div class="hero-metrics-strip">
-          <div class="hero-metric-item">
-            <span class="m-val">78%</span>
-            <span class="m-label">Radiation Exposure Cut</span>
-            <span class="m-sub">Dynamic TruBlock vs TG-76</span>
-          </div>
-          <div class="hero-metric-item">
-            <span class="m-val">&lt; 0.5 mm</span>
-            <span class="m-label">Mean Tracking Error</span>
-            <span class="m-sub">Sub-millimeter servo precision</span>
-          </div>
-          <div class="hero-metric-item">
-            <span class="m-val">&lt; 14 ms</span>
-            <span class="m-label">End-to-End Latency</span>
-            <span class="m-sub">TensorRT on NVIDIA IGX Orin</span>
-          </div>
-          <div class="hero-metric-item">
-            <span class="m-val">0</span>
-            <span class="m-label">Manual Table Resets</span>
-            <span class="m-sub">Continuous lock during drift</span>
-          </div>
-        </div>
-
-        <!-- Omni Rovis Big-Tech Video Theater -->
-        <div class="video-theater-frame" id="rovis-video-showcase">
-          <div class="video-theater-topbar">
-            <div class="window-controls">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <div class="theater-title">
-              Omni Rovis &bull; Autonomous Surgical AI &amp; 78% Radiation Reduction
-            </div>
-            <div class="theater-telemetry">
-              <a href="https://youtu.be/stXc_GGcRzI" target="_blank" rel="noopener" class="theater-top-link" title="Open and watch video on YouTube">
-                <svg class="yt-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                <span class="top-link-text">Watch on YouTube</span>
-                <svg class="arrow-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </a>
-            </div>
-          </div>
-          <div class="video-theater-screen">
-            <iframe 
-              src="https://www.youtube-nocookie.com/embed/stXc_GGcRzI?rel=0&amp;modestbranding=1&amp;playsinline=1" 
-              title="Omni Rovis: Autonomous Surgical AI &amp; 78% Radiation Reduction for C-Arm Fluoroscopy" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen
-              loading="lazy">
-            </iframe>
-          </div>
-          <div class="video-theater-bottombar">
-            <div class="video-theater-chapters">
-              <span class="chapter-label">Key Topics:</span>
-              <span class="chapter-tag"><span class="ch-num">01</span> Radiation Hazard</span>
-              <span class="chapter-tag"><span class="ch-num">02</span> TruBlock™ Collimation</span>
-              <span class="chapter-tag"><span class="ch-num">03</span> TensorRT 60 FPS Servoing</span>
-              <span class="chapter-tag"><span class="ch-num">04</span> Global Market Opportunity</span>
-            </div>
-            <div class="theater-channel-tag">
-              <span>Presented by <strong>Omni IDE</strong></span>
-            </div>
-          </div>
+        <div class="hero-cta-group">
+          <a href="./contact.html" class="btn btn-primary btn-lg">Request 48-hour proof</a>
+          <a href="https://cero.omniide.com" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">Explore Omni Cero</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       3. Section: The Clinical Crisis in Interventional Fluoroscopy
-       ======================================================================== -->
-  <section class="section-padded" id="clinical-need">
+  <!-- ======================================================================
+       2. COMPANY PROFILE & 3-STAGE ROADMAP
+       ====================================================================== -->
+  <section class="section section-panel" id="roadmap">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">CLINICAL CRISIS &bull; OPERATIONAL PAIN POINTS</span>
-        <h2 class="section-title">The Three Invisible Taxes of Fluoroscopic Surgery</h2>
-        <p class="section-desc">
-          Surgeons and cath-lab teams face compounding radiation burdens, procedural interruptions, and contrast limitations under static, unguided C-arm fluoroscopy.
+      <div class="section-intro">
+        <div class="section-kicker">Company Profile &amp; Long-Term Vision</div>
+        <h2 class="section-title">Full-Stack Surgical Imaging &amp; Spine Robotics</h2>
+        <p class="section-lead">
+          Incorporated on 08 November 2025 in Karnataka (CIN: <span class="mono">U86909KA2025PTC210722</span>), Scan AI builds offline-first clinical imaging software, 3D cone-beam CT reconstruction, and tracker-free spine navigation. Backed by a 10+ member Hardware &amp; Software R&amp;D team led by CTOs Nihan and Rohan (IIT Kanpur), we serve X-ray/C-arm OEMs and spine hospitals across India and global emerging markets.
         </p>
       </div>
 
-      <div class="cards-grid three-col">
-        <div class="feature-card">
-          <span class="card-badge" style="color: #ef4444;">BURDEN 01</span>
-          <h3 class="card-title">Radiation Overdose Accumulation</h3>
-          <p class="card-text">
-            Scatter radiation silently damages surgical operators, nurses, and cath-lab teams over decades. Cumulative occupational exposure leads to cataracts, vascular damage, and heightened malignancy risk during prolonged complex interventions.
-          </p>
-          <div class="card-stat" style="color: #ef4444;">Up to 2.4 mSv per complex interventional procedure</div>
-        </div>
-
-        <div class="feature-card">
-          <span class="card-badge" style="color: #f59e0b;">BURDEN 02</span>
-          <h3 class="card-title">Manual Table & C-Arm Reset Tax</h3>
-          <p class="card-text">
-            Surgeons lose focus and manual dexterity taking hands off catheter guidewires 20 to 40+ times per procedure simply to re-center targets drifting from patient respiration, coughing, and internal peristalsis.
-          </p>
-          <div class="card-stat" style="color: #f59e0b;">8&ndash;15 minutes wasted per case on non-therapeutic repositioning</div>
-        </div>
-
-        <div class="feature-card">
-          <span class="card-badge" style="color: #0284c7;">BURDEN 03</span>
-          <h3 class="card-title">Contrast Washout Blindness</h3>
-          <p class="card-text">
-            In high-flow vascular trees and biliary branches, iodinated contrast washes out within 2&ndash;4 seconds. Interventionalists are forced into repeat contrast injections or blind catheter advancement, escalating patient nephrotoxicity risks.
-          </p>
-          <div class="card-stat" style="color: #0284c7;">30&ndash;50% redundant contrast boluses injected due to target loss</div>
-        </div>
-      </div>
-
-      <!-- AAPM TG-76 Literature Benchmark Card -->
-      <div class="motion-citation-card">
-        <div class="citation-header">
-          <span class="citation-badge">CLINICAL LITERATURE BENCHMARK</span>
-          <span class="citation-meta">AAPM Task Group 76 &bull; CIRSE Radiation Protection Standards</span>
-        </div>
-        <p style="font-size: 0.94rem; color: var(--text-body); line-height: 1.6; margin-bottom: 16px;">
-          <strong>The Management of Respiratory Motion in Fluoroscopy & Radiotherapy (AAPM TG-76):</strong> Uncompensated physiological motion during thoracic, abdominal, and pelvic procedures degrades spatial precision, forcing clinical teams to expand fluoroscopic collimation portals by over 300% to avoid target cutoff.
-        </p>
-        <div class="citation-grid">
-          <div class="citation-stat">
-            <span class="c-num" style="color: var(--color-primary);">12&ndash;35 mm</span>
-            <span class="c-lbl">Diaphragmatic Excursion Under Spontaneous Breathing</span>
-          </div>
-          <div class="citation-stat">
-            <span class="c-num" style="color: var(--color-primary);">0.2&ndash;0.5 Hz</span>
-            <span class="c-lbl">Physiological Motion Frequency (Breathing + Peristalsis)</span>
-          </div>
-          <div class="citation-stat">
-            <span class="c-num" style="color: #ef4444;">3.2&times;</span>
-            <span class="c-lbl">Excess Exposure Area Under Conventional Static Collimation</span>
-          </div>
-        </div>
-        <div class="citation-links-row">
-          <span class="c-link-label">Scientific References:</span>
-          <a href="https://www.aapm.org/pubs/reports/RPT_76.pdf" target="_blank" rel="noopener" class="c-source-link">AAPM Report 76 &rarr;</a>
-          <a href="https://www.cirse.org/" target="_blank" rel="noopener" class="c-source-link">CIRSE Guidelines on Radiation Safety &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       4. Section: Perception & Control Architecture
-       ======================================================================== -->
-  <section class="section-padded bg-alt" id="architecture">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">ROBOTIC PERCEPTION &bull; CLOSED-LOOP CONTROL</span>
-        <h2 class="section-title">5-Task Deep Vision Cascade &amp; Adaptive Servoing</h2>
-        <p class="section-desc">
-          Deterministic sub-millimeter target tracking executed at 60 FPS on the NVIDIA IGX Orin medical compute platform, coupled with damped least-squares kinematic control.
-        </p>
-      </div>
-
-      <!-- 5-Head Vision Cascade -->
-      <div class="tech-cascade-container">
-        <h3 class="subsection-title">1. Multi-Task Deep Vision Pipeline</h3>
-        <p class="subsection-desc">
-          Trained on thousands of interventional fluoroscopy frames, each specialized neural head operates concurrently within an end-to-end TensorRT FP16 engine.
-        </p>
-        
-        <div class="cascade-grid">
-          <div class="cascade-layer-card">
-            <span class="layer-badge">STAGE 01</span>
-            <h4 class="layer-name">Backbone Feature Pyramid</h4>
-            <span class="layer-model">RepViT / TensorRT FP16</span>
-            <p class="layer-desc">Extracts multi-scale spatial representations while preserving high-frequency edges of tiny guidewires.</p>
-            <span class="layer-confidence" style="color: #10b981;">1.8 ms Latency</span>
-          </div>
-
-          <div class="cascade-layer-card">
-            <span class="layer-badge">STAGE 02</span>
-            <h4 class="layer-name">Anatomical Target Head</h4>
-            <span class="layer-model">CenterNet Heatmap & Offset</span>
-            <p class="layer-desc">Regresses continuous sub-pixel (x, y) coordinates of calculi, strictures, and anatomical landmarks.</p>
-            <span class="layer-confidence" style="color: #0284c7;">&plusmn;0.22 mm Precision</span>
-          </div>
-
-          <div class="cascade-layer-card">
-            <span class="layer-badge">STAGE 03</span>
-            <h4 class="layer-name">Instrument Segmentation</h4>
-            <span class="layer-model">Boundary-Aware CNN</span>
-            <p class="layer-desc">Distinguishes 0.035" and 0.014" guidewire tips from dense pelvic bones and contrast artifacts.</p>
-            <span class="layer-confidence" style="color: #8b5cf6;">98.4% Dice Score</span>
-          </div>
-
-          <div class="cascade-layer-card">
-            <span class="layer-badge">STAGE 04</span>
-            <h4 class="layer-name">Dynamic Collimation Head</h4>
-            <span class="layer-model">Convex Hull Optimizer</span>
-            <p class="layer-desc">Computes optimal TruBlock blade trajectories to encapsulate the target with minimal radiation field.</p>
-            <span class="layer-confidence" style="color: #f59e0b;">60 FPS Loop</span>
-          </div>
-
-          <div class="cascade-layer-card">
-            <span class="layer-badge">STAGE 05</span>
-            <h4 class="layer-name">Phase &amp; Gating Head</h4>
-            <span class="layer-model">Temporal Transformer</span>
-            <p class="layer-desc">Identifies respiratory cycle phase, contrast arrival, and involuntary patient movement jerks.</p>
-            <span class="layer-confidence" style="color: #ec4899;">99.2% Phase Acc</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Closed-Loop Control Math Box -->
-      <div class="math-box">
-        <div class="math-tag">MATHEMATICAL CONTROL LAW &bull; LEVENBERG-MARQUARDT VISUAL SERVOING</div>
-        <div class="math-equation">
-          v_c = - (J^T J + &lambda; I)^{-1} J^T e
-        </div>
-        <div class="math-explanation">
-          Omni Rovis maps the 2D image error vector <code>e = (u - u*, v - v*)^T</code> into continuous C-arm and collimator velocity commands <code>v_c</code>. The interaction matrix <code>J</code> represents the analytical image Jacobian relating differential image motion to robot kinematics. When approaching kinematic singularities or boundary conditions, the damping factor <code>&lambda;</code> inflates adaptively, ensuring smooth, jitter-free trajectory following with zero overshoot. A dual-channel hardware watchdog interlock halts all actuation within 6 ms if perception confidence drops below 95%.
-        </div>
-      </div>
-
-      <!-- Live Surgical Cockpit Telemetry Showcase -->
-      <div class="cockpit-showcase-frame" style="margin-top: 36px;">
-        <img src="./assets/omni_rovis_cockpit.png" alt="Omni Rovis Autonomous Surgical Workstation Cockpit Interface" />
-        <div class="cockpit-overlay-bar">
-          <span>OMNI ROVIS SURGICAL WORKSTATION &bull; REAL-TIME ANATOMICAL LOCK &bull; DYNAMIC COLLIMATION BOUNDARY</span>
-          <span style="color: #38bdf8; font-weight: 700;">60 FPS SERVO ACTIVE</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       5. Section: Retrospective Pilot Studies (Bench & Clinical Data)
-       ======================================================================== -->
-  <section class="section-padded" id="pilot-studies">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">EMPIRICAL BENCHMARKS &bull; RETROSPECTIVE DATA</span>
-        <h2 class="section-title">Validation Across 2,654 Real Fluoroscopy Frames</h2>
-        <p class="section-desc">
-          Omni Rovis has undergone rigorous retrospective validation on bench phantoms and clinical procedural datasets across multiple interventional modalities.
-        </p>
-      </div>
-
-      <!-- Pilot Study 1 -->
-      <div class="case-study-card">
-        <div class="case-study-content">
-          <div class="report-meta">
-            <span class="report-id">PILOT DATASET #01</span>
-            <span class="report-tag">Urological Intervention</span>
-            <span class="report-tag">820 Frames</span>
-          </div>
-          <h3 class="case-title">Dynamic Respiratory Compensation in Renal Lithotripsy</h3>
-          <p class="case-desc">
-            Continuous 60 FPS fluoroscopic tracking during flexible ureteroscopic laser lithotripsy under general anesthesia with spontaneous ventilation. The target stone exhibited 26 mm of cranio-caudal excursion during normal respiration.
-          </p>
-          <div class="case-stats-grid">
-            <div class="stat-item">
-              <span class="stat-num" style="color: #10b981;">0.41 mm</span>
-              <span class="stat-label">Mean Tracking Error</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num" style="color: var(--color-primary);">820</span>
-              <span class="stat-label">Consecutive Frames</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num" style="color: #0284c7;">0</span>
-              <span class="stat-label">Loss-of-Lock Resets</span>
-            </div>
-          </div>
-          <ul class="case-bullets">
-            <li>&bull; Real-time stone centroid locking through respiratory diaphragmatic drift.</li>
-            <li>&bull; Zero manual table adjustments required by the operating urologist.</li>
-            <li>&bull; Virtual fluoroscopic roadmap maintained even during contrast clearance.</li>
+      <div class="horizon-strip">
+        <article class="horizon-col">
+          <span class="horizon-status deployed">Horizon 1 · Deployed</span>
+          <h3>Omni Cero Clinical Suite</h3>
+          <p>Live production software transforming standard X-ray FPDs and 2D surgical C-arms.</p>
+          <ul class="spec-list">
+            <li><strong>OmniCero DROC:</strong> Universal multi-brand flat-panel DR acquisition console</li>
+            <li><strong>Live Cero:</strong> 30 FPS surgical C-arm fluoroscopy &amp; DSA roadmapping</li>
+            <li><strong>Cero XVR:</strong> Tracker-free 2D-to-3D CT/MRI spine registration</li>
           </ul>
-        </div>
-        <div class="case-study-visual">
-          <img src="./assets/tracking_clip1.png" alt="Pilot Study 1: Lithotripsy stone extraction tracking" class="case-img" />
-          <div class="img-caption">Real-time target centroid tracking and virtual surgical roadmap overlay.</div>
-        </div>
+        </article>
+
+        <article class="horizon-col active-stage">
+          <span class="horizon-status ready">Horizon 2 · Ready for OEMs</span>
+          <h3>OmniCBCT 3D + OmniSpine™</h3>
+          <p>Drop-in 3D CBCT &amp; spine navigation running on existing motorized C-arms &amp; Pre-Op CTs.</p>
+          <ul class="spec-list">
+            <li><strong>0.12 px 9-DOF Lock:</strong> Cancels C-arm gravity sag without hardware encoders</li>
+            <li><strong>Axial &amp; 3D VRT:</strong> 32+ dB CT clarity + titanium pedicle screw streak clearing</li>
+            <li><strong>Dual-Mode Nav:</strong> Supports both Intra-Op 3D C-Arm &amp; Pre-Op CT scans</li>
+          </ul>
+        </article>
+
+        <article class="horizon-col">
+          <span class="horizon-status vision">Horizon 3 · Future Vision</span>
+          <h3>OmniSpine™ 6-DOF Robotics</h3>
+          <p>Full robotic spine surgery platform unifying optical-free vision &amp; robotic precision.</p>
+          <ul class="spec-list">
+            <li><strong>6-DOF Robotic Arm:</strong> Steady sub-millimeter cannulated pedicle sleeve positioning</li>
+            <li><strong>Unified Calibration:</strong> Locked 9-DOF CT-to-C-Arm-to-Robot coordinate frame</li>
+            <li><strong>Zero ₹3 Cr Barrier:</strong> Fraction of imported Mazor X / ExcelsiusGPS cost</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       3. ENGINEERING BOTTLENECK + INTERACTIVE AXIAL PROOF
+       ====================================================================== -->
+  <section class="section" id="bottleneck">
+    <div class="container">
+      <div class="section-intro">
+        <div class="section-kicker">The Market &amp; Engineering Bottleneck</div>
+        <h2 class="section-title">Why 3D C-Arm &amp; Spine Navigation Projects Fail in Practice</h2>
+        <p class="section-lead">
+          Motorized C-arms capture dozens of orbital shots — yet most OEMs stall for years trying to produce sharp Axial 3D spine CT. Scan AI turns ordinary motorized C-arms into navigation-grade 3D scanners purely in software.
+        </p>
       </div>
 
-      <!-- Pilot Study 2 -->
-      <div class="case-study-card reverse">
-        <div class="case-study-content">
-          <div class="report-meta">
-            <span class="report-id">PILOT DATASET #02</span>
-            <span class="report-tag">Radiation Dosimetry</span>
-            <span class="report-tag">Phantom Benchmark</span>
-          </div>
-          <h3 class="case-title">Static Standard Collimation vs. Dynamic TruBlock Tracking</h3>
-          <p class="case-desc">
-            Direct comparison between standard static C-arm collimation and Omni Rovis with the TruBlock dynamic add-on collimator. TruBlock dynamically shaped tungsten leaves around the moving catheter tip, shielding non-target regions.
-          </p>
-          <div class="case-stats-grid">
-            <div class="stat-item">
-              <span class="stat-num" style="color: #10b981;">78.2%</span>
-              <span class="stat-label">DAP Dose Reduction</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num" style="color: var(--color-primary);">11.8 ms</span>
-              <span class="stat-label">Mean Servoing Latency</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num" style="color: #0284c7;">100%</span>
-              <span class="stat-label">Target Inclusion Safety</span>
+      <div class="bottleneck-split">
+        <div class="failure-list">
+          <div class="failure-row">
+            <div class="failure-index">01</div>
+            <div>
+              <h4>C-Arm Gravity Sag (±6 to ±8.5 mm)</h4>
+              <p>Open C-arms flex under gravity during rotation. Standard circular math smears bone walls into blurry double edges, making pedicle checks unsafe.</p>
             </div>
           </div>
-          <ul class="case-bullets">
-            <li>&bull; 78.2% reduction in Dose-Area Product (DAP) under continuous beam illumination.</li>
-            <li>&bull; Sub-12 ms electromechanical response from TMC2209 silent microsteppers.</li>
-            <li>&bull; Active perimeter safety margin ensures catheter tip never leaves illuminated zone.</li>
-          </ul>
+          <div class="failure-row">
+            <div class="failure-index">02</div>
+            <div>
+              <h4>Non-360° Short-Scan &amp; Truncation</h4>
+              <p>Operating tables block full 360° rotation (~198° spins) and patient hips exceed detector width — creating severe cupping and shading.</p>
+            </div>
+          </div>
+          <div class="failure-row">
+            <div class="failure-index">03</div>
+            <div>
+              <h4>Titanium Implant Starbursts</h4>
+              <p>Metal pedicle screws overload filters and project dark streaks directly over the spinal canal right when surgeons check nerve safety.</p>
+            </div>
+          </div>
+          <div class="failure-row">
+            <div class="failure-index">04</div>
+            <div>
+              <h4>Optical Camera Line-of-Sight Failure</h4>
+              <p>Legacy ₹2–4 Crore navigation towers rely on infrared spheres that break line-of-sight when OT staff stand around the surgical field.</p>
+            </div>
+          </div>
         </div>
-        <div class="case-study-visual">
-          <img src="./assets/tracking_clip2.png" alt="Pilot Study 2: Static vs dynamic collimation benchmark" class="case-img" />
-          <div class="img-caption">Static full-field exposure vs. dynamic tight tracking portal.</div>
-        </div>
-      </div>
 
-      <!-- Pilot Study 3 -->
-      <div class="case-study-card">
-        <div class="case-study-content">
-          <div class="report-meta">
-            <span class="report-id">PILOT DATASET #03</span>
-            <span class="report-tag">Gastrointestinal Endoscopy</span>
-            <span class="report-tag">ERCP Benchmark</span>
-          </div>
-          <h3 class="case-title">Sub-Millimeter Navigation Through Complex Biliary Strictures</h3>
-          <p class="case-desc">
-            Retrospective analysis of endoscopic retrograde cholangiopancreatography (ERCP) in a 71.5 mm tortuous biliary stricture. Omni Rovis sustained guidewire tip visibility and trajectory prediction despite respiratory drift and contrast dilution.
-          </p>
-          <div class="case-stats-grid">
-            <div class="stat-item">
-              <span class="stat-num" style="color: #10b981;">71.5 mm</span>
-              <span class="stat-label">Stricture Traversed</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num" style="color: var(--color-primary);">0.48 mm</span>
-              <span class="stat-label">Guidewire Tip Precision</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-num" style="color: #0284c7;">42%</span>
-              <span class="stat-label">Contrast Bolus Saved</span>
+        <div class="proof-viewer">
+          <div class="proof-viewer-head">
+            <h4>Intraoperative Axial Spine Proof (120 Views, ±6 mm Sag)</h4>
+            <div class="segmented-control" role="group" aria-label="Axial Comparison View">
+              <button type="button" class="comp-btn active" data-comp-mode="dual">Side-by-Side</button>
+              <button type="button" class="comp-btn" data-comp-mode="omnicbct">OmniCBCT</button>
+              <button type="button" class="comp-btn" data-comp-mode="naive">Standard</button>
             </div>
           </div>
-          <ul class="case-bullets">
-            <li>&bull; Maintained catheter trajectory vector through 3 sequential respiratory cycles.</li>
-            <li>&bull; Prevented inadvertent ductal perforation by highlighting stricture boundaries.</li>
-            <li>&bull; Cut cumulative procedural fluoroscopy time by 39% compared to conventional guidance.</li>
-          </ul>
-        </div>
-        <div class="case-study-visual">
-          <img src="./assets/tracking_clip3.png" alt="Pilot Study 3: Complex biliary stricture navigation" class="case-img" />
-          <div class="img-caption">Guidewire tip boundary extraction through low-contrast tissue.</div>
+
+          <div class="comparison-dual" id="axialComparisonGrid">
+            <div class="scan-frame" id="tileNaiveRecon">
+              <img src="./assets/deck/image5.png" alt="Standard Circular Reconstruction Blurred Axial Spine" />
+              <div class="scan-meta">
+                <strong>Standard Circular Recon</strong>
+                <span class="bad">Blurred Edges (18.95 dB)</span>
+              </div>
+            </div>
+            <div class="scan-frame" id="tileOmniRecon">
+              <img src="./assets/deck/image6.png" alt="Scan AI OmniCBCT Engine Crisp Cortical Canal" />
+              <div class="scan-meta">
+                <strong>Scan AI OmniCBCT Engine</strong>
+                <span class="good">Crisp Cortical Canal (32.69 dB)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="viewer-note">
+            <strong>Why This Matters Commercially:</strong> Spine surgeons cannot place pedicle screws safely using smeared axial slices. Scan AI solves sag and metal streaks in software with zero hardware redesign.
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       6. Section: Dosimetry Modeling & Economic ROI
-       ======================================================================== -->
-  <section class="section-padded bg-alt" id="dosimetry">
+  <!-- ======================================================================
+       4. OMNISPINE DUAL-MODE 3D NAVIGATION
+       ====================================================================== -->
+  <section class="section section-panel" id="omnispine">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">RADIATION DOSIMETRY &bull; CLINICAL ROI</span>
-        <h2 class="section-title">Up to 78% Scatter Exposure Reduction</h2>
-        <p class="section-desc">
-          Dynamic TruBlock collimation confines X-ray photons strictly to the active surgical target, radically shrinking scatter radiation for cath-lab staff and patients.
+      <div class="section-intro">
+        <div class="section-kicker">Core Product Architecture — OmniSpine™ Navigation</div>
+        <h2 class="section-title">Dual-Mode 3D Navigation (Pre-Op CT + 3D C-Arm)</h2>
+        <p class="section-lead">
+          Unifies Pre-Op CT scans and intraoperative motorized C-arm spins to lock patient anatomy and guide Axial pedicle entry without optical cameras.
         </p>
       </div>
 
-      <div class="radiation-visual-card">
-        <div class="rad-visual-header">
-          <span class="rad-badge">TRUBLOCK DYNAMIC COLLIMATION VS. CONVENTIONAL C-ARM</span>
-          <span class="rad-stat-tag" style="color: #38bdf8;">78% DOSE AREA PRODUCT REDUCTION</span>
-        </div>
-        <div class="rad-image-container">
-          <img src="./assets/trublock_radiation_comparison.jpg" alt="Conventional C-Arm Exposure vs TruBlock Dynamic Collimation" class="rad-hero-img" />
-        </div>
-        <div class="rad-caption-grid">
-          <div class="rad-caption-col">
-            <h4 style="color: #ef4444;">Conventional C-Arm Exposure (Uncollimated)</h4>
-            <p>
-              Emits a broad, static radiation beam covering up to 900 cm&sup2;. Over 70% of X-ray photons strike healthy surrounding anatomy, generating intense scatter radiation that bathes the surgical operator's eyes, thyroid, and extremities.
-            </p>
-          </div>
-          <div class="rad-caption-col">
-            <h4 style="color: #10b981;">TruBlock Dynamic Collimation (Omni Rovis Active)</h4>
-            <p>
-              Tungsten alloy leaf blades autonomously track the instrument tip and lesion, narrowing beam field to the active 50 cm&sup2; surgical zone. Scatter radiation is suppressed at the source before exiting the patient's body.
-            </p>
-          </div>
-        </div>
+      <div class="diagram-frame">
+        <img src="./assets/deck/image7.png" alt="OmniSpine Dual-Mode Navigation Architecture Diagram" />
       </div>
 
-      <!-- Quantitative Comparison Table -->
-      <div class="table-responsive">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Clinical &amp; Operational Metric</th>
-              <th>Conventional C-Arm Fluoroscopy</th>
-              <th class="highlight-col">Omni Rovis + TruBlock System</th>
-              <th>Institutional Impact</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Effective Field of View (FOV)</strong></td>
-              <td>Full static 30 &times; 30 cm detector field</td>
-              <td class="highlight-col"><strong>Dynamic 8 &times; 8 cm target portal</strong></td>
-              <td>78% reduction in total irradiated patient volume</td>
-            </tr>
-            <tr>
-              <td><strong>Surgeon Scatter Exposure Rate</strong></td>
-              <td>1.8 &ndash; 3.4 &mu;Sv / min at operating console</td>
-              <td class="highlight-col"><strong>0.4 &ndash; 0.7 &mu;Sv / min (&darr; 78%)</strong></td>
-              <td>Drastically lowers lifetime occupational cataract/cancer risks</td>
-            </tr>
-            <tr>
-              <td><strong>Manual Workstation Adjustments</strong></td>
-              <td>20 &ndash; 45 manual table/C-arm shifts per case</td>
-              <td class="highlight-col"><strong>0 manual adjustments (auto-servoing)</strong></td>
-              <td>Preserves surgical sterile field &amp; reduces procedural fatigue</td>
-            </tr>
-            <tr>
-              <td><strong>Mean Active Fluoroscopy Time</strong></td>
-              <td>18.4 minutes per complex intervention</td>
-              <td class="highlight-col"><strong>11.2 minutes (&darr; 39%)</strong></td>
-              <td>Accelerates cath-lab case throughput by ~25%</td>
-            </tr>
-            <tr>
-              <td><strong>Contrast Bolus Utilization</strong></td>
-              <td>80 &ndash; 120 mL iodinated contrast</td>
-              <td class="highlight-col"><strong>45 &ndash; 70 mL (&darr; 42%)</strong></td>
-              <td>Significantly lowers risk of Contrast-Induced Nephropathy (CIN)</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="spec-grid-3">
+        <div class="spec-block">
+          <div class="spec-block-label">Path A · Cero XVR</div>
+          <h3>Pre-Op CT Mode</h3>
+          <p>Aligns existing diagnostic CT/MRI to the anesthetized patient on the OT table from just 2 X-ray shots — ideal for any standard 2D C-arm.</p>
+        </div>
+        <div class="spec-block">
+          <div class="spec-block-label">Path B · OmniCBCT</div>
+          <h3>Intra-Op 3D Mode</h3>
+          <p>Reconstructs a fresh 1.1 mm isotropic 3D volume directly from a motorized C-arm spin (~5 s CPU) — capturing post-retraction spine shifts.</p>
+        </div>
+        <div class="spec-block">
+          <div class="spec-block-label">Intra-Op Verification</div>
+          <h3>Verified Axial &amp; Pedicle Margin</h3>
+          <p>Surgeon verifies exact bilateral pedicle walls, entry point, screw diameter, and spinal canal safety before inserting hardware.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       7. Section: TruBlock Electromechanical Assembly
-       ======================================================================== -->
-  <section class="section-padded" id="trublock">
+  <!-- ======================================================================
+       5. VERIFIED ENGINEERING PROOF & LIVE 4-VIEWPORT WORKSTATION
+       ====================================================================== -->
+  <section class="section" id="omnicbct">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">ROBOTIC HARDWARE &bull; UNIVERSAL ADD-ON</span>
-        <h2 class="section-title">TruBlock Dynamic Collimator Module</h2>
-        <p class="section-desc">
-          Engineered as an autonomous, non-invasive robotic add-on universally mountable to existing hospital C-arms without voiding OEM optical warranties.
+      <div class="section-intro">
+        <div class="section-kicker">Verified Engineering Proof — OmniCBCT 3D Engine</div>
+        <h2 class="section-title">Sub-Pixel 9-DOF Calibration &amp; Multi-Anatomy Validation</h2>
+        <p class="section-lead">
+          Quantitatively verified across real human CT datasets under realistic mobile C-arm sag (±6 to ±8.5 mm), truncation, and titanium implants.
         </p>
       </div>
 
-      <div class="hw-grid two-col">
-        <!-- Exploded View -->
-        <div class="hw-card">
-          <div class="hw-card-header">
-            <span class="hw-tag">CAD EXPLODED VIEW</span>
-            <span class="hw-badge">6-Layer Tungsten Assembly</span>
-          </div>
-          <div class="hw-img-box">
-            <img src="./assets/trublock_exploded_view.jpg" alt="TruBlock CAD Exploded Assembly" class="hw-img" />
-          </div>
-          <div class="hw-desc-box">
-            <h4>Precision Multi-Blade Collimator Stack</h4>
-            <p>
-              Features 6 independently actuated high-density tungsten alloy shutter blades engineered to attenuate 99.8% of primary X-ray beam energy outside the active surgical zone.
-            </p>
-          </div>
+      <div class="proof-band">
+        <div class="proof-cell">
+          <div class="proof-num">0.12 px</div>
+          <h4>9-DOF Calibration Residual</h4>
+          <p>Remains 0.1165 px even under severe ±8.5 mm / ±3.0° gantry flex — beating the 0.20 px navigation limit.</p>
         </div>
-
-        <!-- C-Arm Mounted View -->
-        <div class="hw-card">
-          <div class="hw-card-header">
-            <span class="hw-tag">C-ARM INTEGRATION</span>
-            <span class="hw-badge">Universal Quick-Release</span>
-          </div>
-          <div class="hw-img-box">
-            <img src="./assets/trublock_carm_mounted.jpg" alt="TruBlock Mounted on Hospital C-Arm" class="hw-img" />
-          </div>
-          <div class="hw-desc-box">
-            <h4>Non-Invasive C-Arm Retrofit</h4>
-            <p>
-              Patented universal mounting bracket securely locks onto GE OEC, Siemens Cios, and Philips Zenition C-arms in under 12 minutes, requiring zero internal wiring modifications.
-            </p>
-          </div>
+        <div class="proof-cell">
+          <div class="proof-num">32.69 dB · 5.6×</div>
+          <h4>Sag-Compensated Fidelity</h4>
+          <p>Lifts SSIM from 0.1288 to 0.7257 (+13.74 dB PSNR) vs conventional circular recon in 5.26 s on CPU.</p>
+        </div>
+        <div class="proof-cell">
+          <div class="proof-num">+2.24 dB NMAR</div>
+          <h4>Titanium Implant Clarity</h4>
+          <p>Two-pass normalized metal suppression clears bilateral pedicle screw starbursts across the spinal canal.</p>
+        </div>
+        <div class="proof-cell">
+          <div class="proof-num">5/5 Stress Tests</div>
+          <h4>Resilience Under Low-Dose</h4>
+          <p>Validated on 3× noise (+2.31 dB), 44-view sparse (-63% dose), 165° limited arcs, and marker-free Autofocus.</p>
         </div>
       </div>
 
-      <!-- Mechanism Card -->
-      <div class="hw-mechanism-card">
-        <div class="mech-grid">
-          <div class="mech-img-box">
-            <img src="./assets/trublock_mechanism_internal.jpg" alt="TruBlock Internal Linear Guide Mechanism" class="mech-img" />
-          </div>
+      <div class="explorer-panel">
+        <div class="explorer-bar">
           <div>
-            <span class="hw-tag">INTERNAL ACTUATION ARCHITECTURE</span>
-            <h3 class="mech-title">Dual MGN9 Linear Rails &amp; TMC2209 Ultra-Silent Steppers</h3>
-            <p class="mech-desc">
-              TruBlock achieves sub-millimeter dynamic collimation via dual high-grade MGN9 linear guide carriages driven by custom TMC2209 silent microstepping actuators. Operating at 256 microsteps per full step with closed-loop optical encoder feedback, the mechanism responds to TensorRT trajectory updates in under 6 milliseconds with 0.05 mm repeatability.
-            </p>
-            <div class="mech-stats-row">
-              <div class="mech-stat">
-                <span class="m-num" style="color: #10b981;">0.05 mm</span>
-                <span class="m-lbl">Positioning Repeatability</span>
-              </div>
-              <div class="mech-stat">
-                <span class="m-num" style="color: var(--color-primary);">&lt; 6 ms</span>
-                <span class="m-lbl">Actuation Step Latency</span>
-              </div>
-              <div class="mech-stat">
-                <span class="m-num" style="color: #0284c7;">256 &micro;Step</span>
-                <span class="m-lbl">Microstepping Resolution</span>
+            <strong style="font-size: 1.05rem; color: var(--ink-primary);">Clinical Workstation &amp; Validation Explorer</strong>
+            <p style="font-size: 0.86rem; color: var(--ink-muted);">Physics-based 3D reconstruction generalizing across Lumbosacral, Lumbar &amp; Thoracic CT</p>
+          </div>
+          <div class="tab-buttons" role="tablist">
+            <button type="button" class="tab-btn active" data-proof-tab="workstation">4-Viewport Workstation</button>
+            <button type="button" class="tab-btn" data-proof-tab="anatomy">Multi-Anatomy 3D</button>
+            <button type="button" class="tab-btn" data-proof-tab="benchmark">OEM Benchmark Proof</button>
+          </div>
+        </div>
+
+        <div class="tab-pane active" data-proof-pane="workstation">
+          <div class="workstation-img">
+            <img src="./assets/deck/image12.png" alt="OmniCBCT 3D Engine 4-Viewport Motorized Mobile C-Arm Spine Workstation" />
+          </div>
+          <div class="workstation-notes">
+            <div class="spec-block">
+              <div class="spec-block-label">Turnkey 3D Workstation</div>
+              <p>Synchronized Axial / Sagittal / Coronal MPR + Interactive 3D Cinematic VRT rotation with real-time WL/WW windowing.</p>
+            </div>
+            <div class="spec-block">
+              <div class="spec-block-label">Drop-In OEM Integration</div>
+              <p>Ingests native 14/16-bit FPD frames (DCM/TIFF/RAW) &amp; outputs valid 144-slice 3D DICOM / NIfTI.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-proof-pane="anatomy">
+          <div class="anatomy-grid-4">
+            <div class="anatomy-tile">
+              <img src="./assets/deck/image10.png" alt="Lumbosacral L4-S1 3D Reconstruction" />
+              <div class="anatomy-tile-body">
+                <h4>Lumbosacral L4–S1</h4>
+                <span>32.69 dB · 5.6× SSIM</span>
               </div>
             </div>
+            <div class="anatomy-tile">
+              <img src="./assets/deck/image3.png" alt="Pure Lumbar L1-L5 3D Reconstruction" />
+              <div class="anatomy-tile-body">
+                <h4>Pure Lumbar L1–L5</h4>
+                <span>34.28 dB · Zero Pelvis</span>
+              </div>
+            </div>
+            <div class="anatomy-tile">
+              <img src="./assets/deck/image11.png" alt="Thoracic and Ribcage 3D Reconstruction" />
+              <div class="anatomy-tile-body">
+                <h4>Thoracic + Ribcage</h4>
+                <span>30.36 dB · 7.0× SSIM</span>
+              </div>
+            </div>
+            <div class="anatomy-tile">
+              <img src="./assets/deck/image4.png" alt="3D Screw-Scout Translucent Implant View" />
+              <div class="anatomy-tile-body">
+                <h4>3D Screw-Scout</h4>
+                <span>Translucent Implant View</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" data-proof-pane="benchmark">
+          <div class="workstation-img">
+            <img src="./assets/deck/image9.png" alt="OmniCBCT 3D Engine Clinical Human Spine CBCT Reconstruction & Sag Compensation Proof" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       8. Section: Core Enterprise Product: Arogya Connect (Hospital OS)
-       ======================================================================== -->
-  <section class="section-padded" id="arogya-connect">
+  <!-- ======================================================================
+       6. COMMERCIAL PRODUCT PORTFOLIO — OMNI CERO ECOSYSTEM
+       ====================================================================== -->
+  <section class="section section-panel" id="omnicero">
     <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">CORE ENTERPRISE PRODUCT &bull; AROGYA.SCANAI.HEALTH</span>
-        <h2 class="section-title">Arogya Connect &mdash; ABDM &amp; NHCX Hospital Operating System</h2>
-        <p class="section-desc">
-          India's premier digital health operating system, certified for Ayushman Bharat Digital Mission (Milestone 1–4) and powering real-time automated claims adjudication via the National Health Claims Exchange.
+      <div class="section-intro">
+        <div class="section-kicker">Commercial Product Portfolio (cero.omniide.com)</div>
+        <h2 class="section-title">Omni Cero Ecosystem: 3 Production Clinical Software Suites</h2>
+        <p class="section-lead">
+          100% offline, air-gapped Windows architecture with hardware-bound Ed25519 cryptographic licensing — built for hospital data sovereignty.
         </p>
       </div>
 
-      <div class="arogya-enterprise-showcase">
-        <div class="arogya-grid">
-          <div>
-            <div class="arogya-badges-row">
-              <span class="arogya-pill abdm">ABDM M1&ndash;M4 Certified</span>
-              <span class="arogya-pill nhcx">NHCX Real-Time Engine</span>
-              <span class="arogya-pill fhir">FHIR R4 Compliant</span>
-            </div>
-
-            <h3 class="arogya-title">End-to-End Hospital Command Center &amp; Instant Claims</h3>
-            <p class="arogya-desc">
-              Arogya Connect unifies outpatient triage, inpatient bed management, ICU telemetry, pharmacy stock auto-replenishment, and insurance desk operations into a single intelligent dashboard.
-            </p>
-
-            <ul class="arogya-feature-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>ABDM Milestones 1&ndash;4:</strong> Complete ABHA creation, QR-code queue tokening, encrypted health record linking, and national consent manager integration.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Instant NHCX Claims Engine:</strong> Direct, paperless connection to TPAs and insurance underwriters for sub-15-minute pre-authorization and instant discharge settlement.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Clinical Command Center:</strong> Live multi-specialty ward telemetry, OT scheduling, digital physician orders, and automated diagnostic report dispatch.</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Military-Grade Data Protection:</strong> End-to-end AES-256 data encryption at rest and in transit, strict RBAC permissions, and NABH/ISO audit readiness.</span>
-              </li>
-            </ul>
-
-            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-              <a href="https://arogya.scanai.health/" target="_blank" rel="noopener" class="btn btn-primary btn-md" style="display: inline-flex; align-items: center; gap: 6px;">
-                <span>Launch Arogya Connect Platform</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-              </a>
-              <a href="#contact" class="btn btn-secondary btn-md">Request Enterprise Demo</a>
-            </div>
+      <div class="cero-rows">
+        <article class="cero-row">
+          <div class="cero-row-title">
+            <span>Product 01 · Digital Radiography</span>
+            <h3>Omni Cero DROC</h3>
+            <p>Universal DR Operating Console</p>
           </div>
+          <ul class="spec-list" style="border-top: none; padding-top: 0;">
+            <li><strong>Multi-Brand FPD Drivers:</strong> Direct SDK support for Varex, iRay, Vieworks, DRTECH, Rayence, Canon &amp; Carestream detectors.</li>
+            <li><strong>Generator Synchronization:</strong> Integrated kVp/mAs exposure control, AEC sequencing &amp; custom anatomical APR protocols.</li>
+            <li><strong>Complete Hospital Workflow:</strong> Automatic image enhancement, DICOM Worklist, PACS transmission &amp; dry laser film printing.</li>
+          </ul>
+        </article>
 
-          <div class="arogya-preview-frame">
-            <img src="./assets/arogya_omni_dashboard.jpg" alt="Arogya Connect Hospital Command Center Dashboard" />
+        <article class="cero-row">
+          <div class="cero-row-title">
+            <span>Product 02 · Live Fluoroscopy</span>
+            <h3>Live Cero</h3>
+            <p>Real-Time C-Arm &amp; DSA Video Station</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+          <ul class="spec-list" style="border-top: none; padding-top: 0;">
+            <li><strong>30 FPS Low-Latency Video:</strong> Upgrades any standard 2D surgical C-arm with crisp real-time fluoroscopic acquisition via plug-and-play capture.</li>
+            <li><strong>DSA &amp; Vascular Roadmapping:</strong> Instant Digital Subtraction Angiography, pixel shift &amp; landmarking for vascular and trauma cases.</li>
+            <li><strong>Sterile Table-Side Tablet:</strong> Touch-optimized bedside control interface built for ortho, pain management &amp; spine OTs.</li>
+          </ul>
+        </article>
 
-  <!-- ========================================================================
-       9. Section: Commercial Product Catalog Grid
-       ======================================================================== -->
-  <section class="section-padded bg-alt" id="catalog">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-eyebrow">ENTERPRISE SYSTEMS &bull; VERIFIED PLATFORMS</span>
-        <h2 class="section-title">ScanAI Medical Technology Systems</h2>
-        <p class="section-desc">
-          Explore our validated surgical navigation platform and national digital health operating systems.
-        </p>
-      </div>
-
-      <!-- Catalog Filter Bar -->
-      <div class="catalog-filter-bar">
-        <button class="filter-btn active" data-filter="all">All Systems (2)</button>
-        <button class="filter-btn" data-filter="surgical-ai">Surgical AI &amp; Navigation (1)</button>
-        <button class="filter-btn" data-filter="hospital-os">Hospital OS &amp; Health Exchange (1)</button>
-      </div>
-
-      <!-- Dynamic Product Container -->
-      <div class="products-grid" id="productsGridContainer">
-        <!-- Rendered dynamically by js/main.js from js/products-data.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       10. Institutional Inquiries & Demonstration Request Form
-       ======================================================================== -->
-  <section class="section-padded" id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info-box">
-          <span class="section-eyebrow">INSTITUTIONAL CONSULTATION &bull; EVALUATION</span>
-          <h2 style="font-size: clamp(1.8rem, 2.8vw, 2.3rem); color: var(--color-primary); margin-bottom: 16px;">
-            Partner With ScanAI for Surgical &amp; Hospital Innovation
-          </h2>
-          <p style="font-size: 0.95rem; color: var(--text-body); line-height: 1.65; margin-bottom: 24px;">
-            Connect directly with our biomedical engineering and clinical deployment teams to arrange research evaluations of Omni Rovis or schedule an enterprise rollout of Arogya Connect.
-          </p>
-
-          <div class="contact-details-list">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <div>
-                <strong>Official Email Inquiries:</strong>
-                <a href="mailto:hello@scanai.health" style="color: var(--color-brand); font-weight: 600; display: block;">hello@scanai.health</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </div>
-              <div>
-                <strong>Direct Telephone &amp; WhatsApp:</strong>
-                <a href="tel:8792126143" style="color: var(--color-brand); font-weight: 600; display: block;">+91 8792126143</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-              </div>
-              <div>
-                <strong>Consultation Hours:</strong>
-                <span style="color: var(--text-muted); display: block; font-size: 0.88rem;">Monday &ndash; Saturday, 09:00 &ndash; 18:00 IST</span>
-              </div>
-            </div>
+        <article class="cero-row">
+          <div class="cero-row-title">
+            <span>Product 03 · 3D Navigation</span>
+            <h3>Cero XVR</h3>
+            <p>Tracker-Free 3D Surgical Navigation</p>
           </div>
-        </div>
-
-        <!-- Contact Submission Form with Web3Forms -->
-        <div class="contact-form-panel">
-          <h3 style="font-size: 1.25rem; color: var(--color-primary); margin-bottom: 20px;">Request System Demonstration</h3>
-          
-          <form id="clinicalDemoForm" novalidate>
-            <input type="hidden" name="access_key" value="c45f9a0c-53cf-44dc-8397-5c2b0424114e" />
-            <input type="hidden" name="subject" value="New Platform Inquiry from scanai.health" />
-            <input type="hidden" name="from_name" value="ScanAI Web Platform" />
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="formFullName" class="form-label">Full Name <span class="required">*</span></label>
-                <input type="text" id="formFullName" name="name" class="form-control" placeholder="Dr. Jane Smith or Bio-Eng Lead" required />
-                <div class="form-error-msg" id="errorFullName">Please provide your full clinical or professional name.</div>
-              </div>
-
-              <div class="form-group">
-                <label for="formWorkEmail" class="form-label">Institutional Email <span class="required">*</span></label>
-                <input type="email" id="formWorkEmail" name="email" class="form-control" placeholder="name@hospital.org" required />
-                <div class="form-error-msg" id="errorWorkEmail">Please provide a valid professional email address.</div>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="formInstitution" class="form-label">Hospital / Institution <span class="required">*</span></label>
-                <input type="text" id="formInstitution" name="institution" class="form-control" placeholder="Hospital, Health System, or Practice" required />
-                <div class="form-error-msg" id="errorInstitution">Please provide your hospital or organization name.</div>
-              </div>
-
-              <div class="form-group">
-                <label for="formSpecialty" class="form-label">Target Platform / Department</label>
-                <select id="formSpecialty" name="specialty" class="form-control">
-                  <option value="Omni Rovis — Autonomous Surgical Navigation">Omni Rovis &mdash; Autonomous Surgical Navigation</option>
-                  <option value="Arogya Connect — ABDM & NHCX Hospital OS">Arogya Connect &mdash; ABDM &amp; NHCX Hospital OS</option>
-                  <option value="Clinical Engineering & C-Arm Compatibility">Clinical Engineering &amp; C-Arm Compatibility</option>
-                  <option value="Institutional Research & Pilot Trials">Institutional Research &amp; Pilot Trials</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="formMessage" class="form-label">
-                Evaluation Interests &amp; Details <span class="required">*</span>
-              </label>
-              <textarea id="formMessage" name="message" rows="4" class="form-control" placeholder="Please describe your clinical evaluation interests, C-arm models in use, or hospital OS requirements..." required></textarea>
-              <div class="form-error-msg" id="errorMessage">Please provide inquiry details (minimum 10 characters).</div>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
-              <span>Submit Demonstration Request</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </form>
-        </div>
+          <ul class="spec-list" style="border-top: none; padding-top: 0;">
+            <li><strong>X-Ray Volume Registration:</strong> Neural pose estimation aligns live 2D C-arm fluoroscopy shots directly with pre-operative 3D CT/MRI.</li>
+            <li><strong>Zero Optical Cameras Needed:</strong> Sub-millimeter alignment without bulky infrared carts, reflective markers, or line-of-sight interruptions.</li>
+            <li><strong>Bridge to OmniSpine™ Robotics:</strong> Forms the live registration core powering our 3D C-arm CBCT &amp; 6-DOF robotic guidance roadmap.</li>
+          </ul>
+        </article>
       </div>
-    </div>
-  </section>
 
-  <!-- ========================================================================
-       11. Product Specification Modal
-       ======================================================================== -->
-  <div class="modal-backdrop" id="productSpecModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
-    <div class="modal-card">
-      <div class="modal-header">
+      <div class="enterprise-bar">
         <div>
-          <span class="product-category" id="modalProductCategory">Medical Technology</span>
-          <h2 id="modalProductTitle" style="font-size: 1.35rem; color: var(--color-primary);">Product Specifications</h2>
+          <strong>Shared Enterprise Architecture</strong>
+          <p>100% Air-Gapped Offline Execution · Standard Windows 10/11 Carts · Asymmetric Ed25519 Hardware-UUID Licensing</p>
         </div>
-        <button class="modal-close" id="modalCloseBtn" aria-label="Close Specification Modal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-product-layout">
-          <div class="modal-image-box">
-            <img id="modalProductImage" src="./assets/omni_rovis_cockpit.png" alt="Medical System" />
-          </div>
-          <div>
-            <h4 style="margin-bottom: 8px;">System Architecture</h4>
-            <p id="modalProductDesc" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
-              Technical specifications and clinical operational parameters.
-            </p>
-            <a href="#contact" id="modalInquireBtn" class="btn btn-primary btn-sm">Request Evaluation Package</a>
-          </div>
-        </div>
-
-        <h4 style="margin-bottom: 12px; color: var(--color-primary);">Technical Highlights &amp; Validation Data</h4>
-        <table class="modal-spec-table">
-          <tbody id="modalSpecTableBody">
-            <!-- Populated dynamically by js/main.js -->
-          </tbody>
-        </table>
-      </div>
-
-      <div class="modal-footer">
-        <span style="font-size: 0.78rem; color: var(--text-muted);">
-          Institutional white papers, CAD mounting sheets, and benchmark datasets available upon request.
-        </span>
-        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('productSpecModal').classList.remove('active'); document.body.style.overflow='';">
-          Close
-        </button>
+        <a href="https://cero.omniide.com" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Open cero.omniide.com</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ========================================================================
-       12. Enterprise Healthcare Footer
-       ======================================================================== -->
+  <!-- ======================================================================
+       7. ROBOTIC SPINE SURGERY VISION
+       ====================================================================== -->
+  <section class="section" id="robotics">
+    <div class="container">
+      <div class="section-intro">
+        <div class="section-kicker">Robotic Spine Surgery Vision — OmniSpine™ Robotics</div>
+        <h2 class="section-title">Unified 9-DOF C-Arm Pose + 6-DOF Robotic Spine Guidance</h2>
+        <p class="section-lead">
+          Locking patient CT/CBCT, C-arm orbital geometry, and a tremor-free 6-DOF bedside arm into one closed-loop coordinate frame.
+        </p>
+      </div>
+
+      <div class="robotics-split">
+        <div class="robotics-photo">
+          <img src="./assets/deck/image2.jpg" alt="OmniSpine 6-DOF Bedside Robotic Arm and C-Arm System" />
+        </div>
+        <div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 14px;">What 9-DOF + 6-DOF Unification Achieves in Surgery</h3>
+          <ul class="spec-list" style="border-top: 1px solid var(--line-subtle); padding-top: 16px;">
+            <li><strong>9-DOF Projective Calibration:</strong> Captures exact 3D source position, detector tilt &amp; focal flex (0.12 px) so C-arm and patient spine stay mathematically co-registered.</li>
+            <li><strong>6-DOF Robotic Arm Alignment:</strong> Positions a rigid cannulated guide tube across all 3 translations + 3 rotations directly over the planned pedicle axis.</li>
+            <li><strong>Eliminates Human Tremor &amp; Skiving:</strong> Locks trajectory angle firmly on sloped cortical bone, reducing screw breach risk compared to freehand placement.</li>
+            <li><strong>Zero Optical Camera Clutter:</strong> Optical-free XVR/9-DOF registration works seamlessly around crowded surgical teams without sphere occlusion.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="diagram-frame" style="margin-bottom: 0;">
+        <img src="./assets/deck/image8.png" alt="OmniSpine Robotic Closed-Loop 9-DOF to 6-DOF Transform Architecture" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       8. LEADERSHIP & TECHNICAL FOUNDERS
+       ====================================================================== -->
+  <section class="section section-panel" id="leadership">
+    <div class="container">
+      <div class="section-intro">
+        <div class="section-kicker">Leadership &amp; Technical Founders</div>
+        <h2 class="section-title">Executive Leadership &amp; Deep-Tech Engineering Team</h2>
+        <p class="section-lead">
+          Combining healthcare business execution, corporate governance, and top-tier medical imaging &amp; robotics architecture.
+        </p>
+      </div>
+
+      <div class="leadership-grid-4">
+        <article class="leader-card">
+          <div class="leader-avatar-wrap">
+            <img src="./assets/team/ajay.jpeg" alt="Ajay — Director, Founder & CEO" />
+          </div>
+          <h3>Ajay</h3>
+          <div class="leader-role">Director, Founder &amp; CEO</div>
+          <p class="leader-bio">Leads corporate strategy, OEM manufacturer partnerships, hospital adoption, and commercial scale across Scan AI Private Limited.</p>
+        </article>
+
+        <article class="leader-card">
+          <div class="leader-avatar-wrap">
+            <img src="./assets/team/manjula.jpeg" alt="Manjula — Co-Founder & Director" />
+          </div>
+          <h3>Manjula</h3>
+          <div class="leader-role">Co-Founder &amp; Director</div>
+          <p class="leader-bio">Board Director &amp; Co-Founder overseeing corporate governance, statutory compliance, strategic operations, and clinical program execution.</p>
+        </article>
+
+        <article class="leader-card">
+          <div class="leader-avatar-wrap nihan-fit">
+            <img src="./assets/team/nihan.jpeg" alt="Nihan — Chief Technology Officer (Lead CTO)" />
+          </div>
+          <h3>Nihan</h3>
+          <div class="leader-role">Chief Technology Officer (Lead CTO)</div>
+          <p class="leader-bio">Chief architect of the OmniCBCT 3D reconstruction engine, 9-DOF C-arm sag calibration, Cero XVR registration pipeline, and OmniSpine™ 6-DOF robotic guidance roadmap.</p>
+        </article>
+
+        <article class="leader-card">
+          <div class="leader-avatar-wrap">
+            <img src="./assets/team/rohan.jpeg" alt="Rohan — Chief Technology Officer · IIT Kanpur" />
+          </div>
+          <h3>Rohan</h3>
+          <div class="leader-role">Chief Technology Officer · IIT Kanpur</div>
+          <p class="leader-bio">Co-CTO leading advanced computational imaging research, core mathematical algorithms, software reliability, and multi-team R&amp;D execution alongside Lead CTO Nihan.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       9. PARTNERSHIPS & NEXT STEPS (Sequential 3-Step Rollout)
+       ====================================================================== -->
+  <section class="section" id="partnerships">
+    <div class="container">
+      <div class="section-intro">
+        <div class="section-kicker">Partnerships &amp; Next Steps</div>
+        <h2 class="section-title">Partner With Scan AI: From 48-Hour Proof to Spine Robotics</h2>
+        <p class="section-lead">
+          Designed for motorized C-arm manufacturers, spine specialty hospitals, and strategic MedTech investors.
+        </p>
+      </div>
+
+      <div class="steps-grid-3">
+        <div class="step-block">
+          <div class="step-num">Step 1 · 48-Hour Blind Proof</div>
+          <h3>Validate On Your Own C-Arm</h3>
+          <p>Under mutual NDA, share one calibration spin + one spine phantom spin from your motorized C-arm. We return clean 3D DICOM slices in 48 hours.</p>
+        </div>
+        <div class="step-block">
+          <div class="step-num">Step 2 · Workstation Rollout</div>
+          <h3>2–4 Week Cart Integration</h3>
+          <p>Deploy OmniCBCT 3D + OmniSpine™ navigation natively onto your C-arm cart with Axial/3D VRT views and zero tube/hardware redesign.</p>
+        </div>
+        <div class="step-block">
+          <div class="step-num">Step 3 · Robotic Co-Development</div>
+          <h3>Scale to OmniSpine™ 6-DOF</h3>
+          <p>Integrate our upcoming 6-DOF robotic guidance module to launch an indigenous ₹3 Crore-class surgical spine platform at a fraction of import cost.</p>
+        </div>
+      </div>
+
+      <a href="./contact.html" class="btn btn-primary btn-lg">Schedule 48-hour blind proof</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand-summary">
-          <img src="./assets/logo.png" alt="ScanAI Healthcare Logo" />
-          <p>
-            ScanAI develops autonomous surgical motion compensation platforms and certified national digital health operating systems for modern healthcare networks.
-          </p>
+        <div class="footer-brand">
+          <a href="/" class="brand-logo" aria-label="Scan AI Home">
+            <img src="./assets/scanai-logo.png" alt="Scan AI Private Limited Logo" />
+            <div class="brand-wordmark">
+              <strong>Scan AI</strong>
+              <span>Private Limited</span>
+            </div>
+          </a>
+          <p>Clinical 3D Spine Imaging, Tracker-Free Surgical Navigation &amp; 6-DOF Robotic Guidance. Headquartered in Bengaluru, Karnataka, India.</p>
+          <span class="footer-cin">CIN: U86909KA2025PTC210722</span>
         </div>
 
         <div class="footer-col">
-          <h4>Surgical AI</h4>
-          <ul>
-            <li><a href="https://rovis.omniide.com/" target="_blank" rel="noopener">Omni Rovis Platform &rarr;</a></li>
-            <li><a href="#architecture">5-Task Vision Cascade</a></li>
-            <li><a href="#pilot-studies">Retrospective Benchmarks</a></li>
-            <li><a href="#trublock">TruBlock Collimator</a></li>
+          <h4>Platforms</h4>
+          <ul class="footer-links">
+            <li><a href="./products.html#droc">Omni Cero DROC</a></li>
+            <li><a href="./products.html#live-cero">Live Cero Fluoroscopy</a></li>
+            <li><a href="./products.html#cero-xvr">Cero XVR Navigation</a></li>
+            <li><a href="./products.html#omnicbct">OmniCBCT 3D + OmniSpine™</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Hospital Operating System</h4>
-          <ul>
-            <li><a href="https://arogya.scanai.health/" target="_blank" rel="noopener">Arogya Connect Platform &rarr;</a></li>
-            <li><a href="#arogya-connect">ABDM M1&ndash;M4 Architecture</a></li>
-            <li><a href="#arogya-connect">Real-Time NHCX Engine</a></li>
-            <li><a href="#arogya-connect">Command Center Telemetry</a></li>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html#leadership">Executive Leadership</a></li>
+            <li><a href="./about.html#engineering">R&amp;D Organization</a></li>
+            <li><a href="./about.html#governance">MCA Legal Standing</a></li>
+            <li><a href="./verify/">Certificate Verification</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Institutional Contact</h4>
-          <ul>
-            <li><a href="mailto:hello@scanai.health">hello@scanai.health</a></li>
-            <li><a href="tel:8792126143">+91 8792126143</a></li>
-            <li><a href="./about.html">About ScanAI</a></li>
-            <li><a href="./products.html">Verified Products</a></li>
-            <li><a href="./verify/">Verify Credentials</a></li>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:scanai@zohomail.in">scanai@zohomail.in</a></li>
+            <li><a href="https://scanai.health" target="_blank" rel="noopener">scanai.health</a></li>
+            <li><a href="https://cero.omniide.com" target="_blank" rel="noopener">cero.omniide.com</a></li>
+            <li><a href="./contact.html">48-Hour Blind Proof</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-disclaimer-box">
-        <strong>Regulatory &amp; Medical Notice:</strong> Omni Rovis is an investigational medical technology currently validated through bench phantoms and retrospective surgical pilot datasets. It is not yet cleared by the US FDA or CE mark authorities for active human clinical guidance. Arogya Connect is certified under the Ayushman Bharat Digital Mission (ABDM Milestone 1&ndash;4) and configured for National Health Claims Exchange (NHCX) production environments.
-      </div>
-
-      <div class="footer-bottom-bar">
-        <div>&copy; 2026 ScanAI Healthcare Technologies. All rights reserved.</div>
-        <div style="display: flex; gap: 20px;">
-          <a href="./about.html">Institutional Information</a>
-          <a href="./contact.html">Contact Specialist</a>
-          <a href="./verify/">Verify Credentials</a>
-        </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Scan AI Private Limited. All Rights Reserved.</div>
+        <div>Bengaluru South, Karnataka – 560109, India</div>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="./js/products-data.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

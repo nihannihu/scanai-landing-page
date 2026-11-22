@@ -1,1837 +1,809 @@
 /**
- * ScanAI Medical Technology - Component Stylesheet (components.css)
- * Editorial hardware showcases, segmented clinical suite, restrained catalog & forms.
+ * Scan AI Private Limited — Domain-Specific Clinical Components (components.css)
  */
 
 /* ==========================================================================
-   1. Clinical Capabilities Segmented Tabs
+   1. Hero Section (Minimal Flagship Hardware Showcase)
    ========================================================================== */
-.segmented-nav-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.segmented-nav {
-  display: inline-flex;
-  background: var(--bg-alt);
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 4px;
-  gap: 4px;
-  flex-wrap: wrap;
-}
-
-.segment-btn {
-  padding: 8px 18px;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.segment-btn:hover {
-  color: var(--color-primary);
-}
-
-.segment-btn.active {
-  background: #ffffff;
-  color: var(--color-brand);
-  font-weight: 600;
-  box-shadow: var(--shadow-sm);
-}
-
-.segment-panel {
-  display: none;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
-  align-items: center;
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  box-shadow: var(--shadow-sm);
-}
-
-.segment-panel.active {
-  display: grid;
-}
-
-.segment-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.segment-details h3 {
-  font-size: 1.6rem;
-  margin-bottom: 16px;
-  color: var(--color-primary);
-}
-
-.segment-details p {
-  font-size: 1.025rem;
-  color: var(--text-body);
-  line-height: 1.65;
-  margin-bottom: 24px;
-}
-
-.verified-feature-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.verified-feature-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.925rem;
-  color: var(--text-body);
-}
-
-.verified-feature-list li svg {
-  width: 16px;
-  height: 16px;
-  color: var(--color-brand);
-  flex-shrink: 0;
-  margin-top: 3px;
-}
-
-.segment-media-frame {
+.hero-section.hero-fullbleed {
   position: relative;
-  border-radius: var(--radius-md);
+  padding: 152px 0 112px 0;
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  background: var(--surface-canvas);
+  border-bottom: 1px solid var(--line-subtle);
   overflow: hidden;
-  border: 1px solid var(--border-medium);
-  background: var(--bg-subtle);
-  height: 320px;
 }
 
-.segment-media-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.segment-media-caption {
+.hero-bg-layer {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  background: rgba(11, 23, 48, 0.85);
-  color: #ffffff;
-  padding: 4px 10px;
-  border-radius: var(--radius-xs);
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-/* ==========================================================================
-   2. Editorial Medical Hardware Showcases (NOT Ecommerce Cards!)
-   ========================================================================== */
-.hardware-editorial-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-
-.hardware-editorial-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: center;
-}
-
-.hardware-editorial-item.reversed {
-  direction: rtl;
-}
-
-.hardware-editorial-item.reversed > * {
-  direction: ltr;
-}
-
-.hardware-image-canvas {
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 380px;
-  box-shadow: var(--shadow-sm);
-  transition: border-color var(--transition-fast);
-}
-
-.hardware-editorial-item:hover .hardware-image-canvas {
-  border-color: #cbd5e1;
-}
-
-.hardware-image-canvas img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.hardware-info-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.hardware-kicker {
-  font-size: 0.78rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-brand);
-  margin-bottom: 8px;
-}
-
-.hardware-title {
-  font-size: clamp(1.6rem, 2.2vw, 2.1rem);
-  color: var(--color-primary);
-  margin-bottom: 12px;
-  letter-spacing: -0.025em;
-}
-
-.hardware-tagline {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--text-body);
-  margin-bottom: 16px;
-}
-
-.hardware-desc {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: 24px;
-}
-
-.hardware-specs-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding: 18px 0;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: 28px;
-}
-
-.hardware-spec-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.hardware-spec-item .spec-label {
-  font-size: 0.725rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 2px;
-}
-
-.hardware-spec-item .spec-value {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-primary);
-}
-
-.hardware-cta-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-/* ==========================================================================
-   3. Medical Equipment Catalog (Clean Restrained Grid)
-   ========================================================================== */
-.catalog-filter-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-.filter-btn {
-  padding: 7px 16px;
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  border: 1px solid var(--border-medium);
-  background: #ffffff;
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.filter-btn:hover {
-  color: var(--color-primary);
-  border-color: #cbd5e1;
-}
-
-.filter-btn.active {
-  background: var(--color-primary);
-  color: #ffffff;
-  border-color: var(--color-primary);
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 28px;
-}
-
-.product-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.product-card:hover {
-  border-color: var(--color-brand);
-  transform: translateY(-2px);
-}
-
-.product-media {
-  background: var(--bg-subtle);
-  padding: 24px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.product-media img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.product-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.product-category {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--color-brand);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 4px;
-}
-
-.product-name {
-  font-size: 1.1rem;
-  color: var(--color-primary);
-  margin-bottom: 6px;
-}
-
-.product-desc {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.55;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
-
-.product-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: auto;
-}
-
-.product-actions .btn {
-  flex: 1;
-}
-
-/* ==========================================================================
-   4. Specification Modal
-   ========================================================================== */
-.modal-backdrop {
-  position: fixed;
   inset: 0;
-  background: rgba(11, 23, 48, 0.5);
-  backdrop-filter: blur(4px);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
+  background-image: url('../assets/deck/image2.jpg');
+  background-repeat: no-repeat;
+  background-size: 62% auto;
+  background-position: right 2% center;
+  z-index: 0;
   pointer-events: none;
-  transition: opacity var(--transition-normal);
 }
 
-.modal-backdrop.active {
-  opacity: 1;
-  pointer-events: auto;
+.hero-scrim-layer {
+  display: none;
 }
 
-.modal-card {
-  background: #ffffff;
-  width: 100%;
-  max-width: 760px;
-  max-height: 85vh;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  overflow-y: auto;
+.hero-content-wrap {
   position: relative;
-  border: 1px solid var(--border-medium);
+  z-index: 2;
 }
 
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 28px;
-  border-bottom: 1px solid var(--border-subtle);
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  z-index: 10;
+.hero-copy {
+  max-width: 500px;
 }
 
-.modal-close {
-  padding: 6px;
-  border-radius: var(--radius-sm);
-  color: var(--text-muted);
-  cursor: pointer;
-}
-
-.modal-close:hover {
-  color: var(--color-primary);
-  background: var(--bg-subtle);
-}
-
-.modal-close svg {
-  width: 20px;
-  height: 20px;
-}
-
-.modal-body {
-  padding: 28px;
-}
-
-.modal-product-layout {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 28px;
-  margin-bottom: 24px;
-}
-
-.modal-image-box {
-  background: var(--bg-subtle);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 220px;
-}
-
-.modal-image-box img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-.modal-spec-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 14px;
-}
-
-.modal-spec-table th, 
-.modal-spec-table td {
-  padding: 10px 12px;
-  text-align: left;
-  border-bottom: 1px solid var(--border-subtle);
-  font-size: 0.85rem;
-}
-
-.modal-spec-table th {
-  background: var(--bg-subtle);
-  color: var(--color-primary);
+.hero-location {
+  font-size: 0.84rem;
   font-weight: 600;
-  width: 35%;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
 }
 
-.modal-spec-table td {
-  color: var(--text-body);
+.hero-title {
+  font-size: clamp(2.35rem, 4.2vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  color: var(--ink-primary);
+  margin-bottom: 18px;
 }
 
-.modal-footer {
-  padding: 16px 28px;
-  background: var(--bg-subtle);
-  border-top: 1px solid var(--border-subtle);
+.hero-subtitle {
+  font-size: 1.08rem;
+  line-height: 1.58;
+  color: var(--ink-secondary);
+  max-width: 42ch;
+  margin-bottom: 30px;
+}
+
+.hero-cta-group {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-/* ==========================================================================
-   5. Mobile Clinical Suite Section
-   ========================================================================== */
-.mobile-suite-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 56px;
-  align-items: center;
-}
-
-.mobile-app-preview-frame {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  padding: 16px;
-  box-shadow: var(--shadow-md);
-  max-width: 440px;
-  margin: 0 auto;
-}
-
-.mobile-app-preview-frame img {
-  border-radius: var(--radius-md);
-  width: 100%;
-  height: auto;
-}
-
-.app-badges-row {
-  display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 28px;
 }
 
-.app-badge-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
+/* Studio Hardware Frame */
+.hero-lightbox {
+  background: var(--surface-panel);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  padding: 12px;
+  box-shadow: var(--shadow-frame);
+}
+
+.hero-hardware-img {
   background: #ffffff;
-  border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
-  color: var(--color-primary);
-  transition: all var(--transition-fast);
+  overflow: hidden;
+  border: 1px solid var(--line-subtle);
 }
 
-.app-badge-btn:hover {
-  border-color: var(--color-brand);
-  background: var(--bg-subtle);
+.hero-hardware-img img {
+  width: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center;
 }
 
-.app-badge-btn svg {
-  width: 20px;
-  height: 20px;
+.hero-recon-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
 }
 
-.app-badge-btn .badge-sub {
-  font-size: 0.65rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
+.recon-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
 }
 
-.app-badge-btn .badge-main {
-  font-size: 0.85rem;
+.recon-chip img {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: #0b1528;
+  flex-shrink: 0;
+}
+
+.recon-chip span {
+  display: block;
+  font-size: 0.74rem;
   font-weight: 600;
+  color: var(--accent-verified);
+}
+
+.recon-chip strong {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--ink-primary);
+  margin-top: 2px;
 }
 
 /* ==========================================================================
-   6. Clinical Contact & Demo Form
+   2. 3-Stage Horizon Architecture (Joined Editorial Columns)
    ========================================================================== */
-.contact-grid,
-.contact-layout-grid {
+.horizon-strip {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.horizon-col {
+  padding: 32px 28px;
+  border-right: 1px solid var(--line-subtle);
+  display: flex;
+  flex-direction: column;
+}
+
+.horizon-col:last-child {
+  border-right: none;
+}
+
+.horizon-col.active-stage {
+  background: var(--accent-clinical-tint);
+}
+
+.horizon-status {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.horizon-status.deployed {
+  background: var(--accent-verified-tint);
+  color: var(--accent-verified);
+  border: 1px solid rgba(15, 118, 110, 0.22);
+}
+
+.horizon-status.ready {
+  background: #ffffff;
+  color: var(--accent-clinical);
+  border: 1px solid rgba(2, 132, 199, 0.28);
+}
+
+.horizon-status.vision {
+  background: var(--surface-panel);
+  color: var(--ink-primary);
+  border: 1px solid var(--line-strong);
+}
+
+.horizon-col h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.horizon-col > p {
+  font-size: 0.925rem;
+  color: var(--ink-secondary);
+  margin-bottom: 22px;
+}
+
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-subtle);
+}
+
+.spec-list li {
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  padding-left: 14px;
+  position: relative;
+}
+
+.spec-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-clinical);
+}
+
+.spec-list strong {
+  color: var(--ink-primary);
+}
+
+/* ==========================================================================
+   3. Bottleneck Breakdown + Interactive Axial Spine Proof
+   ========================================================================== */
+.bottleneck-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: start;
 }
 
-.contact-info-box,
-.contact-info-col {
+.failure-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
-.contact-meta-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
+.failure-row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line-subtle);
+}
+
+.failure-row:last-child {
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.failure-index {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-clinical);
+  padding-top: 2px;
+}
+
+.failure-row h4 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.failure-row p {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+/* Axial Proof Viewer */
+.proof-viewer {
+  background: var(--surface-panel);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
   padding: 24px;
 }
 
-.contact-meta-card h4 {
-  font-size: 0.95rem;
-  color: var(--color-primary);
-  margin-bottom: 6px;
-}
-
-.contact-meta-card p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
-.contact-details-list {
+.proof-viewer-head {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 18px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
-.contact-item {
-  display: flex;
-  align-items: flex-start;
+.proof-viewer-head h4 {
+  font-size: 0.98rem;
+}
+
+.segmented-control {
+  display: inline-flex;
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+}
+
+.comp-btn {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  border-radius: 3px;
+  transition: background-color var(--ease-ui), color var(--ease-ui);
+}
+
+.comp-btn.active {
+  background: var(--ink-primary);
+  color: #ffffff;
+}
+
+.comparison-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
-.contact-icon {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  min-height: 44px;
-  max-width: 44px;
-  max-height: 44px;
-  border-radius: var(--radius-sm);
-  background: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.15);
-  color: var(--color-brand);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.scan-frame {
+  background: #0b1528;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
   overflow: hidden;
 }
 
-.contact-icon svg {
-  width: 20px !important;
-  height: 20px !important;
-  min-width: 20px !important;
-  min-height: 20px !important;
-  max-width: 20px !important;
-  max-height: 20px !important;
-  flex-shrink: 0;
-  display: block;
+.scan-frame img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
-.contact-form-panel,
-.contact-form-card {
+.scan-meta {
   background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  padding: 36px;
-  box-shadow: var(--shadow-sm);
+  padding: 12px 14px;
+  border-top: 1px solid var(--line-subtle);
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-label {
+.scan-meta strong {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.86rem;
+  color: var(--ink-primary);
+}
+
+.scan-meta span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+.scan-meta span.bad { color: var(--accent-danger); }
+.scan-meta span.good { color: var(--accent-verified); font-weight: 600; }
+
+.viewer-note {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border-left: 3px solid var(--accent-clinical);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.89rem;
+  color: var(--ink-secondary);
+}
+
+/* ==========================================================================
+   4. Architecture Light-Box & Spec Columns
+   ========================================================================== */
+.diagram-frame {
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 28px;
+}
+
+.spec-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.spec-block {
+  border-top: 2px solid var(--ink-primary);
+  padding-top: 18px;
+}
+
+.spec-block-label {
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--accent-clinical);
+  margin-bottom: 8px;
+}
+
+.spec-block h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.spec-block p {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   5. Quantitative Proof Band & Tabbed Clinical Workstation
+   ========================================================================== */
+.proof-band {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--surface-panel);
+  margin-bottom: 36px;
+  overflow: hidden;
+}
+
+.proof-cell {
+  padding: 24px 22px;
+  border-right: 1px solid var(--line-subtle);
+}
+
+.proof-cell:last-child {
+  border-right: none;
+}
+
+.proof-num {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-clinical);
   margin-bottom: 6px;
 }
 
-.form-label .required {
-  color: var(--color-danger);
+.proof-cell h4 {
+  font-size: 0.96rem;
+  margin-bottom: 8px;
+}
+
+.proof-cell p {
+  font-size: 0.86rem;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+}
+
+/* Workstation Explorer */
+.explorer-panel {
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  padding: 24px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.explorer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line-subtle);
+  flex-wrap: wrap;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 8px 15px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink-secondary);
+  background: var(--surface-panel);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-sm);
+  transition: all var(--ease-ui);
+}
+
+.tab-btn.active {
+  background: var(--ink-primary);
+  color: #ffffff;
+  border-color: var(--ink-primary);
+}
+
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+.workstation-img {
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.workstation-notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.anatomy-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.anatomy-tile {
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--surface-panel);
+}
+
+.anatomy-tile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #0b1528;
+}
+
+.anatomy-tile-body {
+  padding: 12px 14px;
+}
+
+.anatomy-tile-body h4 {
+  font-size: 0.94rem;
+  margin-bottom: 2px;
+}
+
+.anatomy-tile-body span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-verified);
+}
+
+/* ==========================================================================
+   6. Omni Cero Ecosystem (Editorial Rows + Dark Enterprise Band)
+   ========================================================================== */
+.cero-rows {
+  border-top: 1px solid var(--line-subtle);
+  margin-bottom: 28px;
+}
+
+.cero-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line-subtle);
+  align-items: start;
+}
+
+.cero-row-title span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-clinical);
+  margin-bottom: 6px;
+}
+
+.cero-row-title h3 {
+  font-size: 1.45rem;
+  margin-bottom: 4px;
+}
+
+.cero-row-title p {
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--accent-verified);
+}
+
+.enterprise-bar {
+  background: var(--ink-primary);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 20px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.enterprise-bar strong {
+  display: block;
+  font-size: 0.82rem;
+  color: #7dd3fc;
+  margin-bottom: 4px;
+}
+
+.enterprise-bar p {
+  font-size: 0.92rem;
+  color: #e2e8f0;
+}
+
+/* ==========================================================================
+   7. Robotics Vision & Leadership Portraits
+   ========================================================================== */
+.robotics-split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.robotics-photo {
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.leadership-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.leader-card {
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  padding: 26px 22px;
+  text-align: center;
+}
+
+.leader-avatar-wrap {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 16px auto;
+  border: 2px solid var(--line-subtle);
+  background: var(--surface-panel);
+}
+
+.leader-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.leader-avatar-wrap.nihan-fit img {
+  object-position: center center;
+  transform: scale(1.06);
+}
+
+.leader-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+.leader-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent-clinical);
+  margin-bottom: 10px;
+}
+
+.leader-bio {
+  font-size: 0.88rem;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+}
+
+/* Sequential 3-Step Partnership Track */
+.steps-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.step-block {
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  padding: 26px;
+}
+
+.step-num {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-clinical);
+  margin-bottom: 10px;
+}
+
+.step-block h3 {
+  font-size: 1.18rem;
+  margin-bottom: 8px;
+}
+
+.step-block p {
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   8. About Page (R&D Divisions & MCA Table) & Contact Form
+   ========================================================================== */
+.division-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.division-panel {
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  padding: 28px;
+}
+
+.division-panel h3 {
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+.governance-table-wrap {
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.governance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.governance-table th,
+.governance-table td {
+  padding: 15px 22px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-subtle);
+  font-size: 0.92rem;
+}
+
+.governance-table th {
+  width: 30%;
+  background: var(--surface-panel);
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+.governance-table tr:last-child th,
+.governance-table tr:last-child td {
+  border-bottom: none;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-form-card {
+  background: #ffffff;
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+.form-group { margin-bottom: 18px; }
+
+.form-group label {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin-bottom: 6px;
 }
 
 .form-control {
   width: 100%;
-  padding: 10px 14px;
-  font-family: inherit;
-  font-size: 0.9rem;
-  color: var(--text-heading);
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
+  padding: 11px 14px;
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  font-family: inherit;
+  font-size: 0.94rem;
+  color: var(--ink-primary);
+  background: #ffffff;
 }
 
 .form-control:focus {
   outline: none;
-  border-color: var(--border-focus);
-  box-shadow: 0 0 0 3px rgba(8, 127, 193, 0.12);
+  border-color: var(--accent-clinical);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.14);
 }
-
-.form-control.error {
-  border-color: var(--color-danger);
-  background: #fffafa;
-}
-
-.form-error-msg {
-  font-size: 0.75rem;
-  color: var(--color-danger);
-  margin-top: 4px;
-  display: none;
-}
-
-.form-error-msg.visible {
-  display: block;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
-/* Toast Notice */
-.toast-notice {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #0b1730;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-lg);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.88rem;
-  z-index: 3000;
-  transform: translateY(80px);
-  opacity: 0;
-  transition: all var(--transition-normal);
-}
-
-.toast-notice.show {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-.toast-notice svg {
-  color: var(--color-teal);
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-
-/* ==========================================================================
-   10. Pre-Clinical Regulatory Banner (Removed per design)
-   ========================================================================== */
-.regulatory-banner {
-  display: none !important;
-}
-
-/* ==========================================================================
-   11. Omni Rovis Cockpit & Metrics Strip
-   ========================================================================== */
-.hero-metrics-strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  padding: 20px 28px;
-  margin: 36px 0 44px 0;
-  box-shadow: var(--shadow-sm);
-}
-
-.metric-pill {
-  display: flex;
-  flex-direction: column;
-}
-
-.metric-val {
-  font-size: 1.55rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
-
-.metric-lbl {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-  font-weight: 500;
-}
-
-.text-emerald { color: #059669 !important; }
-.text-blue { color: #2563eb !important; }
-.text-purple { color: #7c3aed !important; }
-.text-amber { color: #d97706 !important; }
-.text-red { color: #dc2626 !important; }
-.text-sky { color: #0284c7 !important; }
-.text-teal { color: #0d9488 !important; }
-.text-rose { color: #e11d48 !important; }
-
-.hero-metric-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.hero-metric-item .m-val {
-  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
-  font-weight: 800;
-  color: var(--color-primary);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.hero-metric-item .m-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--color-brand);
-  margin-top: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.hero-metric-item .m-sub {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-/* ==========================================================================
-   Big-Tech Video Theater (Omni Rovis Hero Presentation)
-   ========================================================================== */
-.video-theater-frame {
-  position: relative;
-  background: #090d16;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 
-    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
-    0 25px 60px -15px rgba(2, 6, 23, 0.6),
-    0 0 50px -10px rgba(14, 165, 233, 0.22);
-  overflow: hidden;
-  margin-top: 32px;
-  width: 100%;
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-  transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
-}
-
-.video-theater-frame:hover {
-  border-color: rgba(56, 189, 248, 0.35);
-  box-shadow: 
-    0 0 0 1px rgba(56, 189, 248, 0.1) inset,
-    0 30px 70px -12px rgba(2, 6, 23, 0.7),
-    0 0 60px -8px rgba(14, 165, 233, 0.3);
-}
-
-.video-theater-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background: linear-gradient(180deg, #162035 0%, #0d1526 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-  gap: 12px;
-  min-width: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.video-theater-topbar .window-controls {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  flex-shrink: 0;
-}
-
-.video-theater-topbar .window-controls .dot {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.video-theater-topbar .window-controls .dot.red { background: #ef4444; }
-.video-theater-topbar .window-controls .dot.yellow { background: #f59e0b; }
-.video-theater-topbar .window-controls .dot.green { background: #10b981; }
-
-.theater-title {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: #cbd5e1;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  flex: 1;
-  min-width: 0;
-}
-
-.theater-telemetry {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.theater-top-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 6px;
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: #cbd5e1;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all var(--transition-fast);
-}
-
-.theater-top-link:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-.theater-top-link svg.yt-icon {
-  color: #ef4444;
-  flex-shrink: 0;
-}
-
-.theater-top-link svg.arrow-icon {
-  color: #94a3b8;
-  flex-shrink: 0;
-  transition: transform var(--transition-fast);
-}
-
-.theater-top-link:hover svg.arrow-icon {
-  transform: translate(1px, -1px);
-  color: #ffffff;
-}
-
-.video-theater-screen {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #000000;
-  overflow: hidden;
-}
-
-.video-theater-screen iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
-
-.video-theater-bottombar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background: #090d16;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  gap: 14px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.video-theater-chapters {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.chapter-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  padding: 4px 10px;
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: #94a3b8;
-  letter-spacing: 0.02em;
-  transition: all var(--transition-fast);
-}
-
-.chapter-tag:hover {
-  background: rgba(56, 189, 248, 0.08);
-  border-color: rgba(56, 189, 248, 0.25);
-  color: #e2e8f0;
-}
-
-.chapter-tag .ch-num {
-  font-weight: 700;
-  color: #38bdf8;
-  font-size: 0.68rem;
-  letter-spacing: 0.04em;
-}
-
-.chapter-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-right: 4px;
-}
-
-.theater-channel-tag {
-  font-size: 0.72rem;
-  color: #64748b;
-  white-space: nowrap;
-}
-
-.theater-channel-tag strong {
-  color: #94a3b8;
-  font-weight: 600;
-}
-
-.theater-yt-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.3);
-  border-radius: 6px;
-  color: #fca5a5;
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: all var(--transition-fast);
-  flex-shrink: 0;
-}
-
-.theater-yt-btn:hover {
-  background: rgba(239, 68, 68, 0.22);
-  border-color: #ef4444;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-.cockpit-showcase-frame {
-  background: #0f172a;
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
-  margin-top: 24px;
-}
-
-.cockpit-showcase-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.cockpit-overlay-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background: #0f172a;
-  color: #94a3b8;
-  font-size: 0.76rem;
-  letter-spacing: 0.04em;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.showcase-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 20px;
-  background: #1e293b;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.window-controls {
-  display: flex;
-  gap: 6px;
-}
-
-.window-controls .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.window-controls .dot.red { background: #ef4444; }
-.window-controls .dot.yellow { background: #f59e0b; }
-.window-controls .dot.green { background: #10b981; }
-
-.showcase-title {
-  font-size: 0.78rem;
-  font-family: var(--font-primary);
-  font-weight: 600;
-  color: #94a3b8;
-  letter-spacing: 0.02em;
-}
-
-.status-chip {
-  font-size: 0.68rem;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
-}
-.status-chip.live {
-  background: rgba(16, 185, 129, 0.15);
-  color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.3);
-}
-
-.showcase-image-wrapper {
-  background: #020617;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 600px;
-  overflow: hidden;
-}
-
-.showcase-image-wrapper img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-/* ==========================================================================
-   12. Feature Cards & Clinical Crisis
-   ========================================================================== */
-.cards-grid {
-  display: grid;
-  gap: 24px;
-}
-.cards-grid.three-col {
-  grid-template-columns: repeat(3, 1fr);
-}
-.cards-grid.two-col {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.feature-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 28px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
-}
-
-.feature-card:hover {
-  transform: translateY(-2px);
-  border-color: #cbd5e1;
-}
-
-.card-header-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-
-.card-tech-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: var(--bg-subtle);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-brand);
-}
-
-.card-code {
-  font-size: 0.68rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.card-title {
-  font-size: 1.15rem;
-  color: var(--color-primary);
-  margin-bottom: 10px;
-}
-
-.card-text {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 16px;
-  flex-grow: 1;
-}
-
-.card-stat {
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding-top: 12px;
-  border-top: 1px solid var(--border-subtle);
-}
-
-/* Motion Citation Card */
-.motion-citation-card {
-  background: #f8fafc;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  padding: 24px 28px;
-  margin-top: 32px;
-}
-
-.citation-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.citation-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--color-brand);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.citation-meta {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.citation-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 16px 0;
-  border-top: 1px solid var(--border-subtle);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.citation-stat .c-num {
-  font-size: 1.25rem;
-  font-weight: 800;
-  display: block;
-}
-
-.citation-stat .c-lbl {
-  font-size: 0.74rem;
-  color: var(--text-muted);
-  margin-top: 4px;
-}
-
-.citation-links-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 14px;
-  flex-wrap: wrap;
-}
-
-.c-link-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-body);
-}
-
-.c-source-link {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--color-brand);
-}
-.c-source-link:hover {
-  text-decoration: underline;
-}
-
-/* ==========================================================================
-   13. Unified Vision Cascade & Math Box
-   ========================================================================== */
-.tech-cascade-container {
-  margin: 36px 0;
-}
-
-.subsection-title {
-  font-size: 1.35rem;
-  color: var(--color-primary);
-  margin-bottom: 6px;
-}
-
-.subsection-desc {
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  margin-bottom: 24px;
-  max-width: 800px;
-}
-
-.cascade-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
-}
-
-.cascade-layer-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-sm);
-  padding: 18px 16px;
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
-}
-
-.cascade-layer-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-brand);
-}
-
-.layer-badge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: var(--color-brand);
-  letter-spacing: 0.06em;
-  margin-bottom: 6px;
-}
-
-.layer-name {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 4px;
-}
-
-.layer-model {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  font-family: monospace;
-  margin-bottom: 8px;
-}
-
-.layer-desc {
-  font-size: 0.76rem;
-  color: var(--text-body);
-  line-height: 1.45;
-  margin-bottom: 12px;
-  flex-grow: 1;
-}
-
-.layer-confidence {
-  font-size: 0.74rem;
-  font-weight: 700;
-  padding-top: 8px;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.math-box {
-  background: #0f172a;
-  color: #f1f5f9;
-  border-radius: var(--radius-md);
-  padding: 28px 32px;
-  margin: 32px 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.math-tag {
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #38bdf8;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.math-equation {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.15rem;
-  color: #38bdf8;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 6px;
-  padding: 14px 20px;
-  margin-bottom: 16px;
-  overflow-x: auto;
-}
-
-.math-explanation {
-  font-size: 0.86rem;
-  color: #94a3b8;
-  line-height: 1.65;
-}
-
-/* ==========================================================================
-   14. Case Studies & Retrospective Benchmarks
-   ========================================================================== */
-.case-study-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 36px;
-  padding: 36px;
-  margin-bottom: 32px;
-  box-shadow: var(--shadow-sm);
-  align-items: center;
-}
-
-.case-study-card.reverse {
-  grid-template-columns: 0.85fr 1.15fr;
-}
-.case-study-card.reverse .case-study-content {
-  order: 2;
-}
-.case-study-card.reverse .case-study-visual {
-  order: 1;
-}
-
-.report-meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-}
-
-.report-id {
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--color-brand);
-  letter-spacing: 0.06em;
-}
-
-.report-tag {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg-subtle);
-  padding: 2px 8px;
-  border-radius: 4px;
-}
-
-.case-title {
-  font-size: 1.4rem;
-  color: var(--color-primary);
-  margin-bottom: 12px;
-}
-
-.case-desc {
-  font-size: 0.92rem;
-  color: var(--text-body);
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.case-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  background: var(--bg-alt);
-  padding: 14px 18px;
-  border-radius: var(--radius-sm);
-  margin-bottom: 20px;
-}
-
-.stat-item .stat-num {
-  font-size: 1.25rem;
-  font-weight: 800;
-  display: block;
-}
-
-.stat-item .stat-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-.case-bullets {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 0.84rem;
-  color: var(--text-body);
-  margin-bottom: 16px;
-}
-
-.case-study-visual {
-  display: flex;
-  flex-direction: column;
-  background: #090d16;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border-medium);
-}
-
-.case-img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.img-caption {
-  padding: 10px 14px;
-  font-size: 0.75rem;
-  color: #94a3b8;
-  background: #0f172a;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* ==========================================================================
-   15. Dosimetry & Radiation Comparison
-   ========================================================================== */
-.radiation-visual-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 32px;
-}
-
-.rad-visual-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
-  background: #0f172a;
-  color: #ffffff;
-}
-
-.rad-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: #38bdf8;
-}
-
-.rad-stat-tag {
-  font-size: 0.78rem;
-  font-weight: 800;
-}
-
-.rad-image-container {
-  width: 100%;
-  background: #020617;
-}
-
-.rad-hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.rad-caption-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  padding: 24px 28px;
-  background: #ffffff;
-}
-
-.rad-caption-col h4 {
-  font-size: 0.98rem;
-  margin-bottom: 8px;
-}
-
-.rad-caption-col p {
-  font-size: 0.86rem;
-  color: var(--text-muted);
-  line-height: 1.55;
-}
-
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  margin-top: 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-medium);
-  background: #ffffff;
-  box-shadow: var(--shadow-sm);
-}
-
-.comparison-table {
-  width: 100%;
-  min-width: 640px;
-  border-collapse: collapse;
-  font-size: 0.88rem;
-  background: #ffffff;
-}
-
-.comparison-table th, .comparison-table td {
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--border-subtle);
-  text-align: left;
-}
-
-.comparison-table th {
-  background: var(--bg-alt);
-  font-weight: 600;
-  color: var(--color-primary);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.comparison-table th.highlight-col, .comparison-table td.highlight-col {
-  background: rgba(16, 185, 129, 0.04);
-}
-
-/* ==========================================================================
-   16. TruBlock Hardware Exploded View & Mechanisms
-   ========================================================================== */
-.hw-grid {
-  display: grid;
-  gap: 28px;
-}
-.hw-grid.two-col {
-  grid-template-columns: 1fr 1fr;
-}
-
-.hw-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
-}
-
-.hw-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 18px;
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.hw-tag {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--color-brand);
-  letter-spacing: 0.05em;
-}
-
-.hw-badge {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.hw-img-box {
-  background: #020617;
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.hw-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hw-desc-box {
-  padding: 20px;
-}
-
-.hw-desc-box h4 {
-  font-size: 1.05rem;
-  color: var(--color-primary);
-  margin-bottom: 8px;
-}
-
-.hw-desc-box p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  line-height: 1.55;
-}
-
-.hw-mechanism-card {
-  background: #ffffff;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  padding: 24px;
-  margin-top: 24px;
-}
-
-.mech-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 32px;
-  align-items: center;
-}
-
-.mech-img-box {
-  background: #020617;
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  height: 240px;
-}
-
-.mech-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.mech-title {
-  font-size: 1.25rem;
-  color: var(--color-primary);
-  margin: 6px 0 10px 0;
-}
-
-.mech-desc {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.mech-stats-row {
-  display: flex;
-  gap: 20px;
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 14px;
-}
-
-.mech-stat .m-num {
-  font-size: 1.15rem;
-  font-weight: 800;
-  display: block;
-}
-
-.mech-stat .m-lbl {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  margin-top: 2px;
-}
-
-/* ==========================================================================
-   17. Arogya Connect Enterprise Showcase
-   ========================================================================== */
-.arogya-enterprise-showcase {
-  background: linear-gradient(180deg, #ffffff 0%, var(--bg-alt) 100%);
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-xl);
-  padding: 48px;
-  box-shadow: var(--shadow-md);
-  margin-top: 32px;
-}
-
-.arogya-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.arogya-badges-row {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-
-.arogya-pill {
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.arogya-pill.abdm { background: rgba(37, 99, 235, 0.1); color: #2563eb; border: 1px solid rgba(37, 99, 235, 0.2); }
-.arogya-pill.nhcx { background: rgba(16, 185, 129, 0.1); color: #059669; border: 1px solid rgba(16, 185, 129, 0.2); }
-.arogya-pill.fhir { background: rgba(124, 58, 237, 0.1); color: #7c3aed; border: 1px solid rgba(124, 58, 237, 0.2); }
-
-.arogya-title {
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-  color: var(--color-primary);
-  margin-bottom: 16px;
-  line-height: 1.2;
-}
-
-.arogya-desc {
-  font-size: 0.98rem;
-  color: var(--text-body);
-  line-height: 1.65;
-  margin-bottom: 24px;
-}
-
-.arogya-feature-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 32px;
-}
-
-.arogya-feature-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: var(--text-body);
-}
-
-.arogya-feature-list li svg {
-  width: 18px;
-  height: 18px;
-  color: #2563eb;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.arogya-preview-frame {
-  background: #0f172a;
-  border: 1px solid var(--border-medium);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.arogya-preview-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-

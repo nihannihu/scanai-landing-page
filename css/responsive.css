@@ -1,769 +1,147 @@
 /**
- * ScanAI Medical Technology - Responsive Stylesheet (responsive.css)
- * Complete mobile responsiveness: 320px, 375px, 390px, 414px, 768px, 1024px, 1440px
- * Strict ZERO horizontal overflow guarantee.
- * Zero unwanted gaps below sticky header.
+ * Scan AI Private Limited — Responsive Breakpoints (responsive.css)
  */
 
-/* ==========================================================================
-   Zero Horizontal Overflow Safety
-   ========================================================================== */
-html, body {
-  overflow-x: hidden !important;
-  max-width: 100vw !important;
-  width: 100%;
-}
-
-/* ==========================================================================
-   Desktop / Large Tablet (max-width: 1080px)
-   ========================================================================== */
 @media (max-width: 1080px) {
-  .hero-grid {
-    gap: 36px;
+  .hero-bg-layer {
+    background-size: 78% auto;
+    background-position: right -6% bottom 10%;
+  }
+
+  .bottleneck-split,
+  .robotics-split,
+  .cero-row,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .horizon-strip,
+  .spec-grid-3,
+  .steps-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .horizon-col {
+    border-right: none;
+    border-bottom: 1px solid var(--line-subtle);
+  }
+
+  .horizon-col:last-child {
+    border-bottom: none;
+  }
+
+  .proof-band,
+  .anatomy-grid-4,
+  .leadership-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .proof-cell {
+    border-bottom: 1px solid var(--line-subtle);
   }
 
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-
-  .architecture-diagram-container {
-    gap: 12px;
-  }
-
-  .arch-node {
-    flex: 1 1 calc(50% - 12px);
+    gap: 32px;
   }
 }
 
-/* ==========================================================================
-   Tablet & Mobile Breakpoint (max-width: 900px)
-   Hero collapses cleanly into single column with zero gap under navbar
-   ========================================================================== */
-@media (max-width: 900px) {
+@media (max-width: 920px) {
+  .nav-menu,
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 680px) {
   .section {
     padding: 64px 0;
   }
 
-  /* Hero Section: 1-Column Stacking */
-  .hero-grid {
-    grid-template-columns: 1fr !important;
-    gap: 36px !important;
-    padding-top: 14px !important;
-    text-align: center;
-  }
-
-  .hero-content {
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 620px;
-  }
-
-  .hero-kicker-apple {
-    justify-content: center;
-    margin-bottom: 12px;
-  }
-
-  .hero-headline-apple {
-    font-size: clamp(2.25rem, 5.5vw, 3.25rem);
-    text-align: center;
-    margin-bottom: 16px;
-  }
-
-  .hero-lead-apple {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 28px;
-  }
-
-  .hero-cta-group-apple {
-    justify-content: center;
-    margin-bottom: 28px;
-  }
-
-  .trust-flex {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 16px !important;
-  }
-
-  .hero-device-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 12px;
-  }
-
-  /* Segmented Solutions */
-  .segment-panel {
-    grid-template-columns: 1fr;
-    padding: 32px;
-    gap: 32px;
-  }
-
-  .segment-media-frame {
-    height: 240px;
-    order: -1;
-  }
-
-  /* Hardware Editorial */
-  .hardware-editorial-item,
-  .hardware-editorial-item.reversed {
-    grid-template-columns: 1fr;
-    direction: ltr;
-    gap: 36px;
-  }
-
-  .hardware-image-canvas {
-    height: 280px;
-    padding: 32px;
-  }
-
-  /* Mobile Suite */
-  .mobile-suite-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /* Contact Grid */
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /* Product Modal */
-  .modal-product-layout {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .modal-image-box {
-    height: 200px;
-  }
-}
-
-/* ==========================================================================
-   Desktop-to-Tablet Header Breakpoint (max-width: 1200px)
-   ========================================================================== */
-@media (max-width: 1200px) {
-  .nav-menu,
-  .nav-actions {
-    display: none !important;
-  }
-
-  .mobile-toggle {
-    display: block !important;
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-
-/* ==========================================================================
-   Small Tablet & Mobile (max-width: 768px)
-   ========================================================================== */
-@media (max-width: 768px) {
-  :root {
-    --header-height: 68px;
-  }
-
-  .site-header {
-    height: 68px;
-  }
-
-  .container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .nav-menu,
-  .nav-actions {
-    display: none !important;
-  }
-
-  .mobile-toggle {
-    display: block !important;
-    min-height: 44px;
-    min-width: 44px;
-  }
-
-  /* Clean minimal gap below header on mobile so phone top is not cut off */
-  .hero-section {
-    padding-top: calc(var(--header-height) + 12px) !important;
-    padding-bottom: 44px !important;
-  }
-
-  .hero-cta-group-apple {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
-  }
-
-  .btn-apple-primary,
-  .btn-apple-secondary {
-    width: 100%;
-    justify-content: center;
-    padding: 13px 20px;
-  }
-
-  .trust-flex {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-  }
-
-  .segmented-nav {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .segment-btn {
-    width: 100%;
-    text-align: center;
-    min-height: 44px;
-  }
-
-  .arch-node {
-    flex: 1 1 100%;
-  }
-
-  .hardware-specs-row {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .hardware-cta-row {
-    flex-direction: column;
+  .hero-section.hero-fullbleed {
+    padding: 98px 0 265px 0;
+    min-height: 660px;
     align-items: flex-start;
-    gap: 12px;
   }
 
-  .form-row {
+  .hero-location {
+    font-size: 0.78rem;
+    margin-bottom: 8px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.06;
+    margin-bottom: 10px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.48;
+    margin-bottom: 20px;
+  }
+
+  .hero-cta-group {
+    gap: 16px;
+    margin-bottom: 0;
+  }
+
+  .hero-cta-group .btn-lg {
+    padding: 10px 18px;
+    font-size: 0.88rem;
+  }
+
+  .hero-bg-layer {
+    background-size: 106% auto;
+    background-position: center bottom 18px;
+  }
+
+  .hero-scrim-layer {
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(255, 255, 255, 0.92) 44%,
+      rgba(255, 255, 255, 0.15) 62%,
+      rgba(255, 255, 255, 0.0) 80%
+    );
+  }
+
+  .comparison-dual,
+  .workstation-notes,
+  .proof-band,
+  .anatomy-grid-4,
+  .leadership-grid-4,
+  .division-grid-2 {
     grid-template-columns: 1fr;
-    gap: 0;
   }
 
-  .contact-form-panel {
-    padding: 24px;
+  .proof-cell {
+    border-right: none;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
   }
 
-  .footer-bottom-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-}
-
-/* ==========================================================================
-   Mobile Handsets (max-width: 480px)
-   ========================================================================== */
-@media (max-width: 480px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .hero-headline-apple {
-    font-size: 2.1rem;
-    line-height: 1.12;
-  }
-
-  /* Phone Mockup Proportions for Mobile Screens */
-  .device-phone {
-    width: 250px !important;
-    height: 450px !important;
-    border-radius: 38px !important;
-  }
-
-  .phone-screen-video {
-    border-radius: 34px !important;
-  }
-
-  .device-notch {
-    width: 76px !important;
-    height: 20px !important;
-  }
-
-  .video-floating-bar {
-    bottom: 10px !important;
-    left: 10px !important;
-    right: 10px !important;
-  }
-
-  .v-btn {
-    padding: 5px 10px !important;
-    font-size: 0.68rem !important;
-  }
-
-  .hero-tech-strip {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+  .governance-table th,
+  .governance-table td {
+    display: block;
     width: 100%;
+    padding: 10px 16px;
   }
 
-  .tech-divider {
-    display: none;
-  }
-
-  .segment-panel {
-    padding: 20px 16px;
-  }
-
-  .hardware-image-canvas {
-    height: 220px;
-    padding: 20px;
-  }
-
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-actions {
-    flex-direction: column;
-  }
-
-  .cinematic-header-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .modal-card {
-    padding: 0;
-  }
-
-  .modal-body,
-  .modal-header,
-  .modal-footer {
-    padding: 16px;
+  .governance-table th {
+    border-bottom: none;
+    padding-bottom: 4px;
   }
 }
-
-/* ==========================================================================
-   Small Mobile Handsets (max-width: 360px)
-   ========================================================================== */
-@media (max-width: 360px) {
-  .device-phone {
-    width: 225px !important;
-    height: 405px !important;
-    border-radius: 34px !important;
-  }
-
-  .phone-screen-video {
-    border-radius: 30px !important;
-  }
-
-  .hero-headline-apple {
-    font-size: 1.85rem;
-  }
-}
-
-/* ==========================================================================
-   Flagship Layout Responsiveness (Omni Rovis & Arogya Connect)
-   ========================================================================== */
-@media (max-width: 1024px) {
-  .hero-metrics-strip {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 18px 20px;
-  }
-
-  .cascade-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  .case-study-card,
-  .case-study-card.reverse {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 28px 22px;
-  }
-
-  .case-study-card.reverse .case-study-content {
-    order: 1;
-  }
-
-  .hw-grid.two-col {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .mech-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .arogya-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .arogya-enterprise-showcase {
-    padding: 32px 24px;
-  }
-
-  .rad-caption-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .contact-grid,
-  .contact-layout-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Regulatory Banner Mobile (Removed) */
-  .regulatory-banner {
-    display: none !important;
-  }
-
-  /* Hero Section Mobile */
-  .hero-section {
-    padding-top: calc(var(--header-height) + 14px) !important;
-    padding-bottom: 36px !important;
-  }
-
-  .hero-title {
-    font-size: clamp(1.65rem, 5.5vw, 2.2rem) !important;
-    line-height: 1.25 !important;
-  }
-
-  .hero-desc {
-    font-size: 0.92rem !important;
-    line-height: 1.55 !important;
-    margin-bottom: 24px !important;
-  }
-
-  .hero-actions {
-    flex-direction: column !important;
-    width: 100% !important;
-    gap: 10px !important;
-    margin-bottom: 28px !important;
-  }
-
-  .hero-actions .btn {
-    width: 100% !important;
-    justify-content: center !important;
-    padding: 13px 18px !important;
-    font-size: 0.92rem !important;
-  }
-
-  /* Metrics Strip Mobile */
-  .hero-metrics-strip {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 14px !important;
-    padding: 16px 12px !important;
-    margin: 24px 0 32px 0 !important;
-  }
-
-  .hero-metric-item .m-val {
-    font-size: 1.35rem !important;
-  }
-
-  .hero-metric-item .m-label {
-    font-size: 0.68rem !important;
-  }
-
-  .hero-metric-item .m-sub {
-    font-size: 0.65rem !important;
-  }
-
-  /* Video Theater Mobile & Tablet */
-  .video-theater-frame {
-    margin-top: 20px !important;
-    border-radius: var(--radius-md) !important;
-  }
-
-  .video-theater-topbar {
-    padding: 10px 14px !important;
-    gap: 8px !important;
-  }
-
-  .theater-title {
-    font-size: 0.7rem !important;
-    letter-spacing: 0.02em !important;
-  }
-
-  .theater-top-link {
-    padding: 4px 9px !important;
-    font-size: 0.68rem !important;
-    gap: 5px !important;
-  }
-
-  .video-theater-bottombar {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    padding: 10px 14px !important;
-    gap: 8px !important;
-  }
-
-  .video-theater-chapters {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-    padding-bottom: 2px !important;
-    gap: 6px !important;
-  }
-
-  .video-theater-chapters::-webkit-scrollbar {
-    display: none;
-  }
-
-  .chapter-tag {
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-    font-size: 0.68rem !important;
-    padding: 4px 8px !important;
-  }
-
-  .theater-channel-tag {
-    text-align: center !important;
-    font-size: 0.68rem !important;
-  }
-
-  /* Cockpit Frame Mobile */
-  .cockpit-showcase-frame {
-    margin-top: 16px;
-    border-radius: var(--radius-md);
-  }
-
-  .cockpit-overlay-bar {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 6px !important;
-    font-size: 0.68rem !important;
-    padding: 10px 14px !important;
-  }
-
-  /* Clinical Need Mobile */
-  .cards-grid.three-col {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-
-  .feature-card {
-    padding: 22px 18px !important;
-  }
-
-  .citation-grid {
-    grid-template-columns: 1fr !important;
-    gap: 14px !important;
-    padding: 12px 0 !important;
-  }
-
-  .citation-links-row {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 6px !important;
-  }
-
-  /* Architecture & Math Box Mobile */
-  .cascade-grid {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-
-  .math-box {
-    padding: 20px 16px !important;
-    margin: 24px 0 !important;
-  }
-
-  .math-equation {
-    font-size: 0.88rem !important;
-    padding: 10px 12px !important;
-  }
-
-  .math-explanation {
-    font-size: 0.8rem !important;
-    line-height: 1.6 !important;
-  }
-
-  /* Case Studies Mobile */
-  .case-study-card {
-    padding: 20px 16px !important;
-    margin-bottom: 20px !important;
-  }
-
-  .case-title {
-    font-size: 1.2rem !important;
-  }
-
-  .case-stats-grid {
-    grid-template-columns: 1fr !important;
-    gap: 8px !important;
-    padding: 10px 14px !important;
-  }
-
-  .case-img {
-    height: 190px !important;
-  }
-
-  /* Hardware & Mechanism Mobile */
-  .hw-img-box {
-    height: 190px !important;
-  }
-
-  .mech-img-box {
-    height: 180px !important;
-  }
-
-  .mech-stats-row {
-    flex-direction: column !important;
-    gap: 10px !important;
-  }
-
-  /* Arogya Showcase Mobile */
-  .arogya-enterprise-showcase {
-    padding: 24px 16px !important;
-    margin-top: 20px !important;
-  }
-
-  .arogya-title {
-    font-size: 1.5rem !important;
-  }
-
-  .arogya-desc {
-    font-size: 0.88rem !important;
-  }
-
-  .arogya-feature-list li {
-    font-size: 0.84rem !important;
-  }
-
-  /* Product Catalog Mobile */
-  .catalog-filter-bar {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    justify-content: center !important;
-    margin-bottom: 24px !important;
-  }
-
-  .catalog-filter-bar .filter-btn {
-    font-size: 0.78rem !important;
-    padding: 8px 14px !important;
-  }
-
-  .products-grid {
-    grid-template-columns: 1fr !important;
-    gap: 20px !important;
-  }
-
-  /* Contact & Form Mobile */
-  .contact-grid,
-  .contact-layout-grid {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-  }
-
-  .contact-form-panel,
-  .contact-form-card {
-    padding: 24px 18px !important;
-  }
-
-  .contact-details-list {
-    gap: 14px !important;
-  }
-
-  .contact-item {
-    gap: 12px !important;
-  }
-
-  .contact-icon {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
-    min-height: 40px !important;
-    max-width: 40px !important;
-    max-height: 40px !important;
-  }
-
-  .contact-icon svg {
-    width: 18px !important;
-    height: 18px !important;
-    min-width: 18px !important;
-    min-height: 18px !important;
-    max-width: 18px !important;
-    max-height: 18px !important;
-  }
-
-  .form-row {
-    flex-direction: column !important;
-    gap: 0 !important;
-  }
-
-  .form-control {
-    font-size: 16px !important; /* Prevents auto-zoom on iOS */
-  }
-
-  /* Footer Mobile */
-  .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-
-  .footer-bottom-bar {
-    flex-direction: column !important;
-    gap: 10px !important;
-    align-items: flex-start !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-metrics-strip {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-
-  .section-padded {
-    padding: 44px 0 !important;
-  }
-
-  .section-title {
-    font-size: 1.5rem !important;
-  }
-
-  .hero-title {
-    font-size: 1.6rem !important;
-  }
-
-  .btn-lg {
-    width: 100% !important;
-    font-size: 0.9rem !important;
-    padding: 12px 16px !important;
-  }
-
-  /* Video Theater Extra Compact (<480px) */
-  .theater-top-link .top-link-text {
-    display: none !important;
-  }
-
-  .theater-top-link svg.arrow-icon {
-    display: none !important;
-  }
-
-  .theater-top-link {
-    padding: 4px 7px !important;
-  }
-
-  .video-theater-topbar {
-    padding: 8px 10px !important;
-  }
-
-  .theater-title {
-    font-size: 0.65rem !important;
-  }
-}
-

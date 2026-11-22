@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enterprise Systems Catalog — ScanAI</title>
-  <meta name="description" content="Explore ScanAI's core enterprise medical platforms: Omni Rovis (autonomous fluoroscopy motion compensation & surgical navigation) and Arogya Connect (ABDM M1-M4 hospital OS and NHCX claims engine)." />
-  <link rel="icon" type="image/png" href="./assets/logo.png" />
-  
+  <title>Platforms &amp; Clinical Suites — Scan AI Private Limited</title>
+  <meta name="description" content="Explore Scan AI's 4 surgical imaging & spine robotics platforms: Omni Cero DROC, Live Cero, Cero XVR, and OmniCBCT 3D + OmniSpine™." />
+  <link rel="icon" type="image/png" href="./assets/scanai-logo.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="./css/variables.css" />
   <link rel="stylesheet" href="./css/main.css" />
@@ -18,185 +18,196 @@
 </head>
 <body>
 
-  <!-- Site Header -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-container">
-      <a href="/" class="brand-logo" aria-label="ScanAI Home">
-        <img src="./assets/logo.png" alt="ScanAI Healthcare Logo" />
+      <a href="/" class="brand-logo" aria-label="Scan AI Home">
+        <img src="./assets/scanai-logo.png" alt="Scan AI Private Limited Logo" />
+        <div class="brand-wordmark"><strong>Scan AI</strong><span>Private Limited</span></div>
       </a>
-
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="/#rovis-overview" class="nav-link">Omni Rovis</a></li>
-          <li><a href="/#clinical-need" class="nav-link">Clinical Need</a></li>
-          <li><a href="/#architecture" class="nav-link">Vision &amp; Control</a></li>
-          <li><a href="/#pilot-studies" class="nav-link">Pilot Studies</a></li>
-          <li><a href="/#trublock" class="nav-link">TruBlock</a></li>
-          <li><a href="/#arogya-connect" class="nav-link">Arogya Connect</a></li>
-          <li><a href="./products.html" class="nav-link active">Catalog</a></li>
-          <li><a href="./about.html" class="nav-link">About</a></li>
+          <li><a href="/#roadmap" class="nav-link">Roadmap</a></li>
+          <li><a href="/#bottleneck" class="nav-link">Engineering Proof</a></li>
+          <li><a href="/#omnispine" class="nav-link">OmniSpine™</a></li>
+          <li><a href="/#omnicbct" class="nav-link">OmniCBCT 3D</a></li>
+          <li><a href="/#omnicero" class="nav-link">Omni Cero</a></li>
+          <li><a href="./products.html" class="nav-link active">Platforms</a></li>
+          <li><a href="./about.html" class="nav-link">Company</a></li>
         </ul>
       </nav>
-
       <div class="nav-actions">
-        <a href="./contact.html" class="btn-nav-cta">
-          <span>Request Demo</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <a href="./contact.html" class="btn-nav-cta">Partner with us</a>
       </div>
-
-      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+      <button class="mobile-toggle" aria-label="Open Navigation Menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
   <div class="drawer-backdrop"></div>
   <aside class="mobile-drawer" aria-label="Mobile Navigation">
     <div class="drawer-header">
-      <a href="/" aria-label="ScanAI Home"><img src="./assets/logo.png" alt="ScanAI Logo" style="height: 28px;" /></a>
+      <a href="/" class="brand-logo" aria-label="Scan AI Home">
+        <img src="./assets/scanai-logo.png" alt="Scan AI Logo" style="height: 30px;" />
+        <div class="brand-wordmark"><strong>Scan AI</strong><span>Private Limited</span></div>
+      </a>
       <button class="drawer-close" aria-label="Close Menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </div>
     <ul class="mobile-nav-links">
-      <li><a href="/#rovis-overview">Omni Rovis</a></li>
-      <li><a href="/#clinical-need">Clinical Need</a></li>
-      <li><a href="/#architecture">Perception & Control</a></li>
-      <li><a href="/#pilot-studies">Pilot Studies</a></li>
-      <li><a href="/#trublock">TruBlock Hardware</a></li>
-      <li><a href="/#arogya-connect">Arogya Connect (Hospital OS)</a></li>
-      <li><a href="./products.html">Equipment Catalog</a></li>
-      <li><a href="./about.html">About ScanAI</a></li>
-      <li><a href="./contact.html">Contact Specialist</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="./products.html">All Platforms</a></li>
+      <li><a href="./about.html">Leadership &amp; Governance</a></li>
+      <li><a href="./contact.html">Contact &amp; 48-Hr Proof</a></li>
     </ul>
     <div class="drawer-cta-wrap">
-      <a href="./contact.html" class="btn btn-primary btn-md" style="width: 100%;">Request Clinical Demo</a>
+      <a href="./contact.html" class="btn btn-primary btn-md" style="width: 100%;">Request 48-hour proof</a>
     </div>
   </aside>
 
-  <!-- Page Header -->
-  <section style="padding: 140px 0 56px 0; background: #ffffff; border-bottom: 1px solid var(--border-subtle);">
-    <div class="container text-center">
-      <div class="eyebrow-tag">PORTFOLIO INDEX</div>
-      <h1 style="margin-bottom: 16px; font-size: clamp(2rem, 3.5vw, 2.75rem); color: var(--color-primary);">
-        Enterprise Medical Platforms
-      </h1>
-      <p class="text-lead" style="max-width: 720px; margin: 0 auto; color: var(--text-muted);">
-        Review detailed technical specifications, clinical validation benchmarks, and live enterprise deployment links for ScanAI's surgical navigation suite and digital health OS.
-      </p>
-    </div>
-  </section>
-
-  <!-- Catalog Grid Section -->
-  <section class="section" style="padding: 64px 0 96px 0;">
+  <section style="padding: 132px 0 56px 0; background: #ffffff; border-bottom: 1px solid var(--line-subtle);">
     <div class="container">
-      <div class="catalog-filter-bar">
-        <button class="filter-btn active" data-filter="all">All Systems (2)</button>
-        <button class="filter-btn" data-filter="surgical-ai">Surgical AI &amp; Navigation (1)</button>
-        <button class="filter-btn" data-filter="hospital-os">Hospital OS &amp; Health Exchange (1)</button>
-      </div>
-
-      <div class="products-grid" id="productsGridContainer">
-        <!-- Dynamically rendered by js/main.js from js/products-data.js -->
+      <div class="section-intro" style="margin-bottom: 0;">
+        <div class="section-kicker">Cero + OmniSpine · 4 Platforms</div>
+        <h1 class="section-title" style="font-size: clamp(2.1rem, 3.8vw, 2.9rem);">
+          Commercial Clinical Suites &amp; 3D Spine Platforms
+        </h1>
+        <p class="section-lead">
+          100% air-gapped offline Windows execution with hardware-bound Ed25519 cryptographic licensing — built for X-ray/C-arm OEMs and spine hospitals.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Technical Modal -->
-  <div class="modal-backdrop" id="productSpecModal" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle">
-    <div class="modal-card">
-      <div class="modal-header">
-        <div>
-          <span class="product-category" id="modalProductCategory">Medical Technology</span>
-          <h2 id="modalProductTitle" style="font-size: 1.35rem; color: var(--color-primary);">Product Details</h2>
-        </div>
-        <button class="modal-close" id="modalCloseBtn" aria-label="Close Modal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+  <section class="section section-panel">
+    <div class="container">
+      <div class="section-intro">
+        <div class="section-kicker">Horizon 1 · Deployed · cero.omniide.com</div>
+        <h2 class="section-title">Omni Cero Clinical Suite</h2>
+        <p class="section-lead">Live production software transforming standard X-ray FPDs and 2D surgical C-arms.</p>
       </div>
 
-      <div class="modal-body">
-        <div class="modal-product-layout">
-          <div class="modal-image-box">
-            <img id="modalProductImage" src="./assets/omni_rovis_cockpit.png" alt="Medical System" />
+      <div class="cero-rows">
+        <article class="cero-row" id="droc">
+          <div class="cero-row-title">
+            <span>Product 01 · Digital Radiography</span>
+            <h3>Omni Cero DROC</h3>
+            <p>Universal DR Operating Console</p>
           </div>
-          <div>
-            <h4 style="margin-bottom: 8px;">System Architecture</h4>
-            <p id="modalProductDesc" style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
-              Clinical system description.
-            </p>
-            <a href="./contact.html" id="modalInquireBtn" class="btn btn-primary btn-sm">Request Evaluation Package</a>
+          <ul class="spec-list" style="border-top: none; padding-top: 0;">
+            <li><strong>Multi-Brand FPD Drivers:</strong> Direct SDK support for Varex, iRay, Vieworks, DRTECH, Rayence, Canon &amp; Carestream detectors.</li>
+            <li><strong>Generator Synchronization:</strong> Integrated kVp/mAs exposure control, AEC sequencing &amp; custom anatomical APR protocols.</li>
+            <li><strong>Complete Hospital Workflow:</strong> Automatic image enhancement, DICOM Worklist, PACS transmission &amp; dry laser film printing.</li>
+          </ul>
+        </article>
+
+        <article class="cero-row" id="live-cero">
+          <div class="cero-row-title">
+            <span>Product 02 · Live Fluoroscopy</span>
+            <h3>Live Cero</h3>
+            <p>Real-Time C-Arm &amp; DSA Video Station</p>
           </div>
-        </div>
+          <ul class="spec-list" style="border-top: none; padding-top: 0;">
+            <li><strong>30 FPS Low-Latency Video:</strong> Upgrades any standard 2D surgical C-arm with crisp real-time fluoroscopic acquisition via plug-and-play capture.</li>
+            <li><strong>DSA &amp; Vascular Roadmapping:</strong> Instant Digital Subtraction Angiography, pixel shift &amp; landmarking for vascular and trauma cases.</li>
+            <li><strong>Sterile Table-Side Tablet:</strong> Touch-optimized bedside control interface built for ortho, pain management &amp; spine OTs.</li>
+          </ul>
+        </article>
 
-        <h4 style="margin-bottom: 12px; color: var(--color-primary);">Technical &amp; Clinical Highlights</h4>
-        <table class="modal-spec-table">
-          <tbody id="modalSpecTableBody">
-            <!-- Populated dynamically by js/main.js -->
-          </tbody>
-        </table>
-      </div>
-
-      <div class="modal-footer">
-        <span style="font-size: 0.78rem; color: var(--text-muted);">
-          Detailed technical datasheets and institutional documentation available upon request.
-        </span>
-        <button class="btn btn-secondary btn-sm" onclick="document.getElementById('productSpecModal').classList.remove('active'); document.body.style.overflow='';">
-          Close
-        </button>
+        <article class="cero-row" id="cero-xvr">
+          <div class="cero-row-title">
+            <span>Product 03 · 3D Navigation</span>
+            <h3>Cero XVR</h3>
+            <p>Tracker-Free 3D Surgical Navigation</p>
+          </div>
+          <ul class="spec-list" style="border-top: none; padding-top: 0;">
+            <li><strong>X-Ray Volume Registration:</strong> Neural pose estimation aligns live 2D C-arm fluoroscopy shots directly with pre-operative 3D CT/MRI.</li>
+            <li><strong>Zero Optical Cameras Needed:</strong> Sub-millimeter alignment without bulky infrared carts, reflective markers, or line-of-sight interruptions.</li>
+            <li><strong>Bridge to OmniSpine™ Robotics:</strong> Forms the live registration core powering our 3D C-arm CBCT &amp; 6-DOF robotic guidance roadmap.</li>
+          </ul>
+        </article>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
+  <section class="section" id="omnicbct">
+    <div class="container">
+      <div class="section-intro">
+        <div class="section-kicker">Horizon 2 &amp; 3 · OEM Ready &amp; Robotics</div>
+        <h2 class="section-title">OmniCBCT 3D Engine + OmniSpine™ Platform</h2>
+        <p class="section-lead">
+          Drop-in 3D CBCT &amp; dual-mode spine navigation running on existing motorized C-arms &amp; Pre-Op CTs, scaling into unified 6-DOF robotic pedicle guidance.
+        </p>
+      </div>
+
+      <div class="robotics-split" style="margin-bottom: 0;">
+        <div class="robotics-photo">
+          <img src="./assets/deck/image12.png" alt="OmniCBCT 3D Engine 4-Viewport Spine Workstation" />
+        </div>
+        <div>
+          <h3 style="font-size: 1.25rem; margin-bottom: 12px;">Navigation-Grade 3D From Motorized C-Arms</h3>
+          <ul class="spec-list" style="border-top: 1px solid var(--line-subtle); padding-top: 16px; margin-bottom: 24px;">
+            <li><strong>0.12 px 9-DOF Lock:</strong> Cancels ±6 to ±8.5 mm C-arm gravity sag without hardware encoders.</li>
+            <li><strong>32.69 dB · 5.6× SSIM:</strong> Reconstructs 1.1 mm isotropic 3D volumes in 5.26 s on CPU.</li>
+            <li><strong>+2.24 dB NMAR:</strong> Two-pass normalized metal suppression clears titanium screw starbursts.</li>
+            <li><strong>Turnkey DICOM/NIfTI:</strong> Ingests 14/16-bit FPD frames (DCM/TIFF/RAW) &amp; exports 144-slice 3D DICOM.</li>
+          </ul>
+          <h3 style="font-size: 1.2rem; margin-bottom: 8px;">OmniSpine™ Dual-Mode &amp; 6-DOF Robotics</h3>
+          <p style="font-size: 0.94rem; color: var(--ink-secondary); line-height: 1.65;">
+            Unifies Cero XVR (2-shot Pre-Op CT registration) and OmniCBCT (Intra-Op 3D C-arm spin) into one coordinate frame, scaling to a 6-DOF bedside robotic arm for tremor-free cannulated pedicle sleeve placement at a fraction of ₹3 Crore imported hardware cost.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand-summary">
-          <img src="./assets/logo.png" alt="ScanAI Healthcare Logo" />
-          <p>ScanAI develops autonomous surgical motion compensation platforms and certified national digital health operating systems for modern healthcare networks.</p>
+        <div class="footer-brand">
+          <a href="/" class="brand-logo" aria-label="Scan AI Home">
+            <img src="./assets/scanai-logo.png" alt="Scan AI Private Limited Logo" />
+            <div class="brand-wordmark"><strong>Scan AI</strong><span>Private Limited</span></div>
+          </a>
+          <p>Clinical 3D Spine Imaging, Tracker-Free Surgical Navigation &amp; 6-DOF Robotic Guidance. Headquartered in Bengaluru, Karnataka, India.</p>
+          <span class="footer-cin">CIN: U86909KA2025PTC210722</span>
         </div>
         <div class="footer-col">
-          <h4>Surgical AI</h4>
-          <ul>
-            <li><a href="https://rovis.omniide.com/" target="_blank" rel="noopener">Omni Rovis Platform &rarr;</a></li>
-            <li><a href="/#architecture">5-Task Vision Cascade</a></li>
-            <li><a href="/#pilot-studies">Retrospective Benchmarks</a></li>
-            <li><a href="/#trublock">TruBlock Collimator</a></li>
+          <h4>Platforms</h4>
+          <ul class="footer-links">
+            <li><a href="./products.html#droc">Omni Cero DROC</a></li>
+            <li><a href="./products.html#live-cero">Live Cero Fluoroscopy</a></li>
+            <li><a href="./products.html#cero-xvr">Cero XVR Navigation</a></li>
+            <li><a href="./products.html#omnicbct">OmniCBCT 3D + OmniSpine™</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Hospital Operating System</h4>
-          <ul>
-            <li><a href="https://arogya.scanai.health/" target="_blank" rel="noopener">Arogya Connect Platform &rarr;</a></li>
-            <li><a href="/#arogya-connect">ABDM M1&ndash;M4 Architecture</a></li>
-            <li><a href="/#arogya-connect">Real-Time NHCX Engine</a></li>
-            <li><a href="/#arogya-connect">Command Center Telemetry</a></li>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html#leadership">Executive Leadership</a></li>
+            <li><a href="./about.html#engineering">R&amp;D Organization</a></li>
+            <li><a href="./about.html#governance">MCA Legal Standing</a></li>
+            <li><a href="./verify/">Certificate Verification</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Institutional Contact</h4>
-          <ul>
-            <li><a href="mailto:hello@scanai.health">hello@scanai.health</a></li>
-            <li><a href="tel:8792126143">+91 8792126143</a></li>
-            <li><a href="./about.html">About ScanAI</a></li>
-            <li><a href="./contact.html">Request Consultation</a></li>
+          <h4>Connect</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:scanai@zohomail.in">scanai@zohomail.in</a></li>
+            <li><a href="https://scanai.health" target="_blank" rel="noopener">scanai.health</a></li>
+            <li><a href="https://cero.omniide.com" target="_blank" rel="noopener">cero.omniide.com</a></li>
+            <li><a href="./contact.html">48-Hour Blind Proof</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-disclaimer-box">
-        <strong>Regulatory &amp; Medical Notice:</strong> Omni Rovis is an investigational medical technology currently validated through bench phantoms and retrospective surgical pilot datasets. It is not yet cleared by the US FDA or CE mark authorities for active human clinical guidance. Arogya Connect is certified under the Ayushman Bharat Digital Mission (ABDM Milestone 1&ndash;4) and configured for National Health Claims Exchange (NHCX) production environments.
-      </div>
-      <div class="footer-bottom-bar">
-        <div>&copy; 2026 ScanAI Healthcare Technologies. All rights reserved.</div>
-        <div><a href="./contact.html">Contact Specialist</a></div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Scan AI Private Limited. All Rights Reserved.</div>
+        <div>Bengaluru South, Karnataka – 560109, India</div>
       </div>
     </div>
   </footer>
 
-  <script src="./js/products-data.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>
